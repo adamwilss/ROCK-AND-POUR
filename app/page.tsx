@@ -223,33 +223,33 @@ export default function Home() {
             <div className="events-list-col">
               <div className="events-list">
                 {eventsData.map((event, index) => (
-                  <div key={event.id} className="event-row scroll-reveal" style={{ transitionDelay: \`\${(index + 1) * 0.2}s\` }}>
-                <div className="event-date-col">
-                  <span className="event-month">{event.month}</span>
-                  <span className="event-day">{event.day}</span>
-                  <span className="event-time">{event.time}</span>
-                </div>
-                <div className="event-info-col">
-                  <h3>{event.bandName}</h3>
-                  <p>{event.description}</p>
-                </div>
-                <div className="event-action-col">
-                  {event.soldOut ? (
-                    <button className="btn btn-outline-gold" disabled style={{ opacity: 0.5, cursor: 'not-allowed' }}>SOLD OUT</button>
-                  ) : (
-                    <a href={event.ticketLink} target="_blank" rel="noreferrer" className="btn btn-gold">Get Tickets</a>
-                  )}
-                </div>
+                  <div key={event.id} className="event-row scroll-reveal" style={{ transitionDelay: `${(index + 1) * 0.2}s` }}>
+                    <div className="event-date-col">
+                      <span className="event-month">{event.month}</span>
+                      <span className="event-day">{event.day}</span>
+                      <span className="event-time">{event.time}</span>
+                    </div>
+                    <div className="event-info-col">
+                      <h3>{event.bandName}</h3>
+                      <p>{event.description}</p>
+                    </div>
+                    <div className="event-action-col">
+                      {event.soldOut ? (
+                        <button className="btn btn-outline-gold" disabled style={{ opacity: 0.5, cursor: 'not-allowed' }}>SOLD OUT</button>
+                      ) : (
+                        <a href={event.ticketLink} target="_blank" rel="noreferrer" className="btn btn-gold">Get Tickets</a>
+                      )}
+                    </div>
+                  </div>
+                ))}
               </div>
-                                ))}
             </div>
           </div>
         </div>
-      </div>
-    </section >
+      </section >
 
-      {/* Footer */ }
-      < footer className = "footer" >
+      {/* Footer */}
+      < footer className="footer" >
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
@@ -281,7 +281,7 @@ export default function Home() {
             <p>&copy; 2026 Rock &amp; Pour at The Bowdon Rooms. All rights reserved.</p>
           </div>
         </div>
-            </footer >
-        </>
-    );
+      </footer >
+    </>
+  );
 }
