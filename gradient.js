@@ -67,21 +67,21 @@ document.addEventListener('DOMContentLoaded', () => {
             this.uniforms = {
                 uTime: { value: 0 },
                 uResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
-                uColor1: { value: new THREE.Vector3(1.0, 1.0, 1.0) }, // White
-                uColor2: { value: new THREE.Vector3(0.83, 0.69, 0.22) }, // Gold 
-                uColor3: { value: new THREE.Vector3(0.95, 0.95, 0.95) }, // Light Gray/White
-                uColor4: { value: new THREE.Vector3(0.60, 0.48, 0.08) }, // Dark Gold
-                uColor5: { value: new THREE.Vector3(1.0, 0.98, 0.95) }, // Off white/warm
-                uColor6: { value: new THREE.Vector3(0.83, 0.69, 0.22) }, // Gold
-                uSpeed: { value: 0.6 }, // slow and luxurious
-                uIntensity: { value: 1.2 },
+                uColor1: { value: new THREE.Vector3(0.12, 0.12, 0.12) }, // Dark Gray
+                uColor2: { value: new THREE.Vector3(0.35, 0.28, 0.05) }, // Deep Gold 
+                uColor3: { value: new THREE.Vector3(0.04, 0.04, 0.04) }, // Near Black
+                uColor4: { value: new THREE.Vector3(0.15, 0.12, 0.02) }, // Dark Gold
+                uColor5: { value: new THREE.Vector3(0.20, 0.20, 0.20) }, // Charcoal
+                uColor6: { value: new THREE.Vector3(0.25, 0.20, 0.04) }, // Med-Dark Gold
+                uSpeed: { value: 0.25 }, // Slower, flowier
+                uIntensity: { value: 1.0 }, // slightly lower
                 uTouchTexture: { value: null },
-                uGrainIntensity: { value: 0.04 }, // Subtle grain
-                uDarkNavy: { value: new THREE.Vector3(0.05, 0.05, 0.05) }, // near black base
-                uGradientSize: { value: 0.65 },
+                uGrainIntensity: { value: 0.05 }, // Slightly more grain to blend darks smoothly
+                uDarkNavy: { value: new THREE.Vector3(0.02, 0.02, 0.02) }, // Pure dark base instead of navy
+                uGradientSize: { value: 0.85 }, // Larger gradients for smoother blending
                 uGradientCount: { value: 12.0 },
-                uColor1Weight: { value: 0.7 },
-                uColor2Weight: { value: 1.5 }
+                uColor1Weight: { value: 0.8 },
+                uColor2Weight: { value: 1.2 }
             };
         }
         init() {
