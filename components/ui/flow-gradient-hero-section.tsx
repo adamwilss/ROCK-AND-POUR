@@ -75,21 +75,21 @@ class GradientBackground {
         this.uniforms = {
             uTime: { value: 0 },
             uResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
-            uColor1: { value: new THREE.Vector3(0.12, 0.12, 0.12) }, // Dark Gray
-            uColor2: { value: new THREE.Vector3(0.35, 0.28, 0.05) }, // Deep Gold 
-            uColor3: { value: new THREE.Vector3(0.04, 0.04, 0.04) }, // Near Black
-            uColor4: { value: new THREE.Vector3(0.15, 0.12, 0.02) }, // Dark Gold
-            uColor5: { value: new THREE.Vector3(0.20, 0.20, 0.20) }, // Charcoal
-            uColor6: { value: new THREE.Vector3(0.25, 0.20, 0.04) }, // Med-Dark Gold
+            uColor1: { value: new THREE.Vector3(0.06, 0.06, 0.06) }, // Near Black
+            uColor2: { value: new THREE.Vector3(0.55, 0.36, 0.0) },  // Vivid Amber
+            uColor3: { value: new THREE.Vector3(0.02, 0.02, 0.02) }, // Pure Black
+            uColor4: { value: new THREE.Vector3(0.42, 0.22, 0.0) },  // Deep Amber
+            uColor5: { value: new THREE.Vector3(0.10, 0.10, 0.10) }, // Dark Charcoal
+            uColor6: { value: new THREE.Vector3(0.60, 0.38, 0.02) }, // Bright Amber-Orange
             uSpeed: { value: 0.25 }, // Slower, flowier
-            uIntensity: { value: 1.0 },
+            uIntensity: { value: 1.1 },
             uTouchTexture: { value: null },
-            uGrainIntensity: { value: 0.05 },
-            uDarkNavy: { value: new THREE.Vector3(0.02, 0.02, 0.02) },
+            uGrainIntensity: { value: 0.04 },
+            uDarkNavy: { value: new THREE.Vector3(0.02, 0.01, 0.0) },
             uGradientSize: { value: 0.85 },
             uGradientCount: { value: 12.0 },
-            uColor1Weight: { value: 0.8 },
-            uColor2Weight: { value: 1.2 }
+            uColor1Weight: { value: 0.7 },
+            uColor2Weight: { value: 1.4 }
         };
     }
     init() {
