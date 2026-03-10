@@ -100,6 +100,12 @@ export default function Home() {
         </div>
 
         <div className="hero-overlay"></div>
+        <div className="hero-spotlights">
+          <div className="spotlight spotlight-1" />
+          <div className="spotlight spotlight-2" />
+          <div className="spotlight spotlight-3" />
+        </div>
+        <div className="hero-haze" />
         <div id="hero-particles" className="hero-particles"></div>
         <div className="hero-content">
           <h3 className="hero-subtitle fade-up">THE BOWDON ROOMS PRESENTS</h3>
