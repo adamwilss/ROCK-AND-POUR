@@ -1374,12 +1374,73 @@ a {
     }
 
     .hero-date {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         letter-spacing: 1.5px;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    .container {
+        padding: 0 1.2rem;
+    }
+
+    .stats-strip {
+        flex-direction: column;
+    }
+
+    .stat-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 184, 0, 0.15);
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .btn-large {
+        padding: 0.85rem 2rem;
+        font-size: 0.95rem;
+    }
+
+    .drinks-grid {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 768px) {
+    .section {
+        padding: 4rem 0;
+    }
+
+    .section-title {
+        font-size: 2.1rem;
+    }
+
+    .experience-image {
+        display: none;
+    }
+
+    .glass-card {
+        position: static;
+        margin-top: 1.5rem;
+        max-width: 100%;
+        border-radius: 4px;
+    }
+
+    .stats-strip {
+        max-width: 100%;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+    }
+
     .nav-links {
         display: none;
         position: fixed;
