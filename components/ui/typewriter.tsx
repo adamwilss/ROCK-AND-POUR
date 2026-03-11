@@ -23,7 +23,7 @@ const Typewriter = ({
   const [display, setDisplay] = useState("")
   const [wordIdx, setWordIdx] = useState(0)
   const [phase, setPhase] = useState<"typing" | "waiting" | "deleting">("typing")
-  const timeout = useRef<NodeJS.Timeout>()
+  const timeout = useRef<NodeJS.Timeout | undefined>(undefined)
 
   useEffect(() => {
     const word = text[wordIdx]
