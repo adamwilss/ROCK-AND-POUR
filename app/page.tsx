@@ -77,7 +77,9 @@ export default function Home() {
       {/* Navigation */}
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="navbar">
         <div className="nav-container">
-          <a href="#" className="nav-logo">ROCK <span className="gold-text">&amp;</span> POUR</a>
+          <a href="#" className="nav-logo">
+            <img src="/title-logo-transparent.png" alt="ROCK & POUR" className="nav-logo-img" />
+          </a>
           <div className={`nav-links ${menuActive ? 'active' : ''}`}>
             <a href="#experience" onClick={() => setMenuActive(false)}>The Experience</a>
             <a href="#drinks" onClick={() => setMenuActive(false)}>Premium Drinks</a>
@@ -109,7 +111,7 @@ export default function Home() {
           </h3>
           <div className="hero-title-img fade-up delay-1">
             <div className="title-img-wrap">
-              <img src="/title-logo.png" alt="ROCK & POUR" className="title-logo-img" />
+              <img src="/title-logo-transparent.png" alt="ROCK & POUR" className="title-logo-img" />
               <div className="title-sheen" />
             </div>
           </div>

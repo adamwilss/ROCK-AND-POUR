@@ -143,6 +143,7 @@ a {
 
 .navbar.scrolled {
     background: rgba(5, 5, 5, 0.95);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     padding: 0.8rem 0;
     border-bottom: 1px solid rgba(255, 184, 0, 0.15);
@@ -159,12 +160,23 @@ a {
 }
 
 .nav-logo {
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
-    font-weight: 700;
-    letter-spacing: 2px;
     flex-shrink: 0;
     z-index: 1001;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo-img {
+    height: 36px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 0 8px rgba(255, 184, 0, 0.3));
+}
+
+@media (max-width: 768px) {
+    .nav-logo-img {
+        height: 28px;
+    }
 }
 
 .nav-links {
@@ -460,9 +472,8 @@ a {
     width: 820px;
     max-width: 92vw;
     height: auto;
-    mix-blend-mode: multiply;
-    filter: drop-shadow(0 0 50px rgba(255, 184, 0, 0.5));
     display: block;
+    filter: drop-shadow(0 0 50px rgba(255, 184, 0, 0.45));
 }
 
 .title-sheen {
@@ -471,6 +482,13 @@ a {
     pointer-events: none;
     mix-blend-mode: screen;
     overflow: hidden;
+    /* Mask the sheen to text pixels only using the transparent PNG */
+    -webkit-mask-image: url('/title-logo-transparent.png');
+    mask-image: url('/title-logo-transparent.png');
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
 }
 
 .title-sheen::after {
@@ -1139,6 +1157,35 @@ a {
 
     .title-logo-img {
         width: 560px;
+    }
+}
+
+@media (max-width: 600px) {
+    .title-logo-img {
+        width: 95vw;
+    }
+
+    .hero-content {
+        padding: 0 1rem;
+    }
+
+    .countdown-container {
+        padding: 1rem 1.2rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .countdown {
+        gap: 0.6rem;
+    }
+
+    .time-val {
+        font-size: 1.6rem;
+    }
+
+    .hero-date {
+        font-size: 0.85rem;
+        letter-spacing: 1.5px;
     }
 }
 
