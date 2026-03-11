@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { SmokeBackground } from "@/components/ui/spooky-smoke-animation";
 
 // Data Configuration
 const eventsData = [
@@ -95,6 +96,9 @@ export default function Home() {
 
       {/* Hero Section */}
       <header className="hero" id="hero">
+        <div className="smoke-bg-layer">
+          <SmokeBackground smokeColor="#9A5000" />
+        </div>
         <div className="hero-overlay"></div>
         <div className="hero-spotlights">
           <div className="spotlight spotlight-1" />
