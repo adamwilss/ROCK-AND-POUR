@@ -95,6 +95,11 @@ export default function Home() {
 
   return (
     <>
+      {/* Site-wide atmospheric smoke — fixed behind all sections */}
+      <div className="site-smoke">
+        <SmokeBackground smokeColor="#9A5000" />
+      </div>
+
       {/* Navigation */}
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="navbar">
         <div className="nav-container">
@@ -116,9 +121,6 @@ export default function Home() {
 
       {/* Hero Section */}
       <header className="hero" id="hero">
-        <div className="smoke-bg-layer">
-          <SmokeBackground smokeColor="#9A5000" />
-        </div>
         <div className="hero-overlay"></div>
         <div className="hero-spotlights">
           <div className="spotlight spotlight-1" />
@@ -181,7 +183,7 @@ export default function Home() {
           <div className="experience-grid">
             <div className="experience-text scroll-reveal">
               <p className="section-overline">The Experience</p>
-              <h2 className="section-title">An Evening of <span className="gold-text"><Typewriter text={["Excess","Decadence","Revelry","Indulgence","Abandon"]} speed={115} deleteSpeed={70} waitTime={3400} /></span> and Energy</h2>
+              <h2 className="section-title">An Evening of Energy and <span className="gold-text"><Typewriter text={["Excess","Decadence","Revelry","Indulgence","Abandon"]} speed={115} deleteSpeed={70} waitTime={3400} /></span></h2>
               <div className="gold-rule-left" />
               <p className="section-desc">
                 Rock &amp; Pour is not your average night out. A curated, high-energy evening at the prestigious Bowdon Rooms — one of Cheshire&apos;s most celebrated venues.

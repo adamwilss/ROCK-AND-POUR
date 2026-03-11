@@ -336,6 +336,7 @@ a {
 /* Hero Section */
 .hero {
     position: relative;
+    z-index: 2; /* sits above the fixed site-smoke layer */
     height: 100vh;
     min-height: 800px;
     display: flex;
@@ -345,6 +346,16 @@ a {
     overflow: hidden;
     background-color: #060402;
     padding-bottom: 18vh;
+}
+
+/* Fixed atmospheric smoke — sits behind sections, hero rises above it */
+.site-smoke {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    opacity: 0.22;
 }
 
 .smoke-bg-layer {
