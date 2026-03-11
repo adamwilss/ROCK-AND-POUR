@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { FlowGradientHeroSection } from "@/components/ui/flow-gradient-hero-section";
 
 // Data Configuration
 const eventsData = [
@@ -94,11 +93,6 @@ export default function Home() {
 
       {/* Hero Section */}
       <header className="hero" id="hero">
-        {/* 3D Next.js React Gradient Component Background */}
-        <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-          <FlowGradientHeroSection />
-        </div>
-
         <div className="hero-overlay"></div>
         <div className="hero-spotlights">
           <div className="spotlight spotlight-1" />
@@ -149,6 +143,9 @@ export default function Home() {
           <div className="hero-actions fade-up delay-4">
             <a href="https://www.skiddle.com/whats-on/Warrington/The-Bowdon-Rooms/Rock--Pour/42147525/" target="_blank" rel="noreferrer" className="btn btn-gold btn-large">GET YOUR TICKETS</a>
           </div>
+        </div>
+        <div className="hero-crowd">
+          <img src="/crowd.png" alt="" aria-hidden="true" />
         </div>
       </header>
 
