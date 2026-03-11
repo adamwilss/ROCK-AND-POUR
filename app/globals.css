@@ -434,6 +434,7 @@ a {
 .title-img-wrap {
     position: relative;
     display: inline-block;
+    overflow: hidden;
 }
 
 .title-logo-img {
@@ -447,10 +448,52 @@ a {
 
 .title-sheen {
     position: absolute;
-    inset: -30px;
-    mix-blend-mode: screen;
+    inset: 0;
     pointer-events: none;
-    will-change: background;
+    mix-blend-mode: screen;
+    overflow: hidden;
+}
+
+.title-sheen::after {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: 0;
+    width: 70px;
+    height: 140%;
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(255, 252, 210, 0.18) 20%,
+        rgba(255, 255, 255, 0.92) 50%,
+        rgba(255, 252, 210, 0.18) 80%,
+        transparent 100%
+    );
+    transform: skewX(-18deg) translateX(-150px);
+    animation: glint 5.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+    animation-delay: 2s;
+}
+
+@keyframes glint {
+    0%, 100% {
+        transform: skewX(-18deg) translateX(-150px);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0;
+        transform: skewX(-18deg) translateX(-150px);
+    }
+    8% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+        transform: skewX(-18deg) translateX(1100px);
+    }
+    33% {
+        opacity: 0;
+        transform: skewX(-18deg) translateX(1100px);
+    }
 }
 
 @keyframes titleGlow {

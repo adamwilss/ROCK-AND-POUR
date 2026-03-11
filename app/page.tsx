@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { FlowGradientHeroSection } from "@/components/ui/flow-gradient-hero-section";
 
@@ -20,7 +20,6 @@ export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
   const [timeLeft, setTimeLeft] = useState({ days: "00", hours: "00", minutes: "00", seconds: "00" });
-  const sheenRef = useRef<HTMLDivElement>(null);
 
   const targetEvent = eventsData.find(e => !e.soldOut && new Date(e.date).getTime() > new Date().getTime()) || eventsData[0];
 
@@ -74,17 +73,6 @@ export default function Home() {
     }
   }, []);
 
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!sheenRef.current) return;
-      const x = (e.clientX / window.innerWidth) * 100;
-      const y = (e.clientY / window.innerHeight) * 100;
-      sheenRef.current.style.background = `radial-gradient(ellipse 55% 70% at ${x}% ${y}%, rgba(255,245,180,0.75) 0%, rgba(255,190,60,0.35) 35%, transparent 65%)`;
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
   return (
     <>
       {/* Navigation */}
@@ -128,7 +116,7 @@ export default function Home() {
           <div className="hero-title-img fade-up delay-1">
             <div className="title-img-wrap">
               <img src="/title-logo.png" alt="ROCK & POUR" className="title-logo-img" />
-              <div ref={sheenRef} className="title-sheen" />
+              <div className="title-sheen" />
             </div>
           </div>
 
