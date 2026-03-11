@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { SmokeBackground } from "@/components/ui/spooky-smoke-animation";
 import { Typewriter } from "@/components/ui/typewriter";
+import { Beer, Wine, Sparkles, Flame } from "lucide-react";
 
 
 // Data Configuration
@@ -217,25 +218,25 @@ export default function Home() {
           <div className="drinks-grid">
             <div className="drink-card scroll-reveal delay-1">
               <div className="drink-card-accent" />
-              <div className="drink-icon">🍺</div>
+              <div className="drink-icon"><Beer size={36} strokeWidth={1.25} /></div>
               <h3>Premium Draught</h3>
               <p>Moretti, Cruz Campo &amp; Murphy&apos;s — poured properly, all night long.</p>
             </div>
             <div className="drink-card scroll-reveal delay-2">
               <div className="drink-card-accent" />
-              <div className="drink-icon">🍷</div>
+              <div className="drink-icon"><Wine size={36} strokeWidth={1.25} /></div>
               <h3>Fine Wines</h3>
               <p>Sauvignon Blanc, quality reds &amp; rosés — proper wines served with care.</p>
             </div>
             <div className="drink-card scroll-reveal delay-3">
               <div className="drink-card-accent" />
-              <div className="drink-icon">🥂</div>
+              <div className="drink-icon"><Sparkles size={36} strokeWidth={1.25} /></div>
               <h3>Prosecco</h3>
               <p>Premium prosecco flowing all evening — because every great night deserves a toast.</p>
             </div>
             <div className="drink-card scroll-reveal delay-4">
               <div className="drink-card-accent" />
-              <div className="drink-icon">🥃</div>
+              <div className="drink-icon"><Flame size={36} strokeWidth={1.25} /></div>
               <h3>Premium Spirits</h3>
               <p>Branded whiskeys, vodkas, brandies &amp; gins — the full top-shelf experience.</p>
             </div>
