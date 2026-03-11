@@ -2,6 +2,25 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { SmokeBackground } from "@/components/ui/spooky-smoke-animation";
+import { SocialLinks } from "@/components/ui/social-links";
+
+const footerSocials = [
+  {
+    name: "Instagram",
+    href: "#",
+    image: "https://link-hover-lndev.vercel.app/instagram.png",
+  },
+  {
+    name: "Facebook",
+    href: "#",
+    image: "https://link-hover-lndev.vercel.app/facebook.png",
+  },
+  {
+    name: "TikTok",
+    href: "#",
+    image: "https://link-hover-lndev.vercel.app/tiktok.png",
+  },
+];
 
 // Data Configuration
 const eventsData = [
@@ -284,11 +303,7 @@ export default function Home() {
             </div>
             <div className="footer-social">
               <h4>Follow Us</h4>
-              <div className="social-icons">
-                <a href="#" aria-label="Instagram">IG</a>
-                <a href="#" aria-label="Facebook">FB</a>
-                <a href="#" aria-label="TikTok">TK</a>
-              </div>
+              <SocialLinks socials={footerSocials} className="justify-start gap-0 -ml-5" />
             </div>
           </div>
           <div className="footer-bottom">

@@ -64,7 +64,8 @@ void main(){gl_Position=position;}`;
 
   updateScale() {
     const dpr = Math.max(1, window.devicePixelRatio);
-    const { clientWidth: width, clientHeight: height } = this.canvas;
+    const width = this.canvas.clientWidth || window.innerWidth;
+    const height = this.canvas.clientHeight || window.innerHeight;
     this.canvas.width = width * dpr;
     this.canvas.height = height * dpr;
     this.gl.viewport(0, 0, this.canvas.width, this.canvas.height);
@@ -186,5 +187,10 @@ export const SmokeBackground: React.FC<SmokeBackgroundProps> = ({
     }
   }, [smokeColor]);
 
-  return <canvas ref={canvasRef} className="w-full h-full block" />;
+  return (
+    <canvas
+      ref={canvasRef}
+      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', display: 'block' }}
+    />
+  );
 };
