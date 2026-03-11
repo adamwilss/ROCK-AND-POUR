@@ -429,17 +429,28 @@ a {
 
 .hero-title-img {
     margin-bottom: 2.5rem;
-    animation: titleGlow 4s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.title-img-wrap {
+    position: relative;
+    display: inline-block;
 }
 
 .title-logo-img {
-    width: 600px;
-    max-width: 90vw;
+    width: 820px;
+    max-width: 92vw;
     height: auto;
     mix-blend-mode: multiply;
-    filter: drop-shadow(0 0 40px rgba(255, 184, 0, 0.4));
+    filter: drop-shadow(0 0 50px rgba(255, 184, 0, 0.5));
     display: block;
-    margin: 0 auto;
+}
+
+.title-sheen {
+    position: absolute;
+    inset: -30px;
+    mix-blend-mode: screen;
+    pointer-events: none;
+    will-change: background;
 }
 
 @keyframes titleGlow {
@@ -1065,7 +1076,7 @@ a {
     }
 
     .title-logo-img {
-        width: 480px;
+        width: 560px;
     }
 }
 
