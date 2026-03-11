@@ -21,35 +21,39 @@ const Typewriter = ({
   cursorClassName = "",
 }: TypewriterProps) => {
   const [display, setDisplay] = useState("")
-  const [wordIdx, setWordIdx] = useState(0)
-  const [phase, setPhase] = useState<"typing" | "waiting" | "deleting">("typing")
-  const timeout = useRef<NodeJS.Timeout | undefined>(undefined)
+  const state = useRef({ wordIdx: 0, phase: "typing" as "typing" | "deleting", chars: "" })
+  const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
 
   useEffect(() => {
-    const word = text[wordIdx]
-    clearTimeout(timeout.current)
+    const tick = () => {
+      const s = state.current
+      const word = text[s.wordIdx]
 
-    if (phase === "typing") {
-      if (display.length < word.length) {
-        timeout.current = setTimeout(() => {
-          setDisplay(word.slice(0, display.length + 1))
-        }, speed)
+      if (s.phase === "typing") {
+        if (s.chars.length < word.length) {
+          s.chars = word.slice(0, s.chars.length + 1)
+          setDisplay(s.chars)
+          timer.current = setTimeout(tick, speed)
+        } else {
+          s.phase = "deleting"
+          timer.current = setTimeout(tick, waitTime)
+        }
       } else {
-        timeout.current = setTimeout(() => setPhase("deleting"), waitTime)
-      }
-    } else if (phase === "deleting") {
-      if (display.length > 0) {
-        timeout.current = setTimeout(() => {
-          setDisplay(display.slice(0, -1))
-        }, deleteSpeed)
-      } else {
-        setWordIdx((prev) => (prev + 1) % text.length)
-        setPhase("typing")
+        if (s.chars.length > 0) {
+          s.chars = s.chars.slice(0, -1)
+          setDisplay(s.chars)
+          timer.current = setTimeout(tick, deleteSpeed)
+        } else {
+          s.wordIdx = (s.wordIdx + 1) % text.length
+          s.phase = "typing"
+          timer.current = setTimeout(tick, speed)
+        }
       }
     }
 
-    return () => clearTimeout(timeout.current)
-  }, [display, phase, wordIdx, text, speed, deleteSpeed, waitTime])
+    timer.current = setTimeout(tick, speed)
+    return () => clearTimeout(timer.current)
+  }, [text, speed, deleteSpeed, waitTime])
 
   return (
     <span className={className}>
