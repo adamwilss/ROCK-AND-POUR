@@ -2,8 +2,40 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Rock & Pour at The Bowdon Rooms",
-  description: "Luxury Live Music & All-Inclusive Experience",
+  metadataBase: new URL("https://www.rockandpour.co.uk"),
+  title: "Rock & Pour | Premium Mobile Cocktail Bar for Weddings, Parties and Events",
+  description:
+    "Rock & Pour delivers premium mobile cocktail bar experiences for weddings, private parties and corporate events across the UK.",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Rock & Pour | Premium Mobile Cocktail Bar",
+    description:
+      "Premium mobile cocktail bar experiences for weddings, private parties and corporate events across the UK.",
+    url: "https://www.rockandpour.co.uk",
+    siteName: "Rock & Pour",
+    type: "website",
+    images: [
+      {
+        url: "/POSTER.png",
+        width: 520,
+        height: 737,
+        alt: "Rock & Pour — Live Music & All-Inclusive Drinks at The Bowdon Rooms",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rock & Pour | Premium Mobile Cocktail Bar",
+    description:
+      "Premium mobile cocktail bar experiences for weddings, private parties and corporate events across the UK.",
+    images: ["/POSTER.png"],
+  },
 };
 
 export default function RootLayout({
