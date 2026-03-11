@@ -95,7 +95,7 @@ export default function Home() {
             <a href="https://www.thebowdonrooms.co.uk" target="_blank" rel="noreferrer" className="nav-link-external">The Bowdon Rooms</a>
             <a href="https://www.skiddle.com" target="_blank" rel="noreferrer" className="btn btn-outline-gold nav-cta">Buy Tickets</a>
           </div>
-          <div className="mobile-menu-btn" onClick={() => setMenuActive(!menuActive)}>
+          <div className={`mobile-menu-btn ${menuActive ? 'active' : ''}`} onClick={() => setMenuActive(!menuActive)}>
             <span></span><span></span><span></span>
           </div>
         </div>

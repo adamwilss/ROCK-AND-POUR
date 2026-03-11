@@ -329,8 +329,9 @@ a {
     width: 26px;
     height: 2px;
     background-color: var(--color-text);
-    transition: var(--transition);
     display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    transform-origin: center;
 }
 
 /* Hero Section */
@@ -1482,8 +1483,37 @@ a {
         letter-spacing: 2px;
     }
 
+    /* Mobile navbar: logo hidden, just the hamburger */
+    .nav-logo {
+        display: none;
+    }
+
+    .nav-container {
+        justify-content: flex-end;
+    }
+
+    /* Navbar stays invisible until scrolled — hamburger floats cleanly */
+    .navbar:not(.scrolled) {
+        background: transparent;
+        padding: 1.2rem 0;
+    }
+
     .mobile-menu-btn {
         display: flex;
+    }
+
+    /* Hamburger → X when menu open */
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     .hero-title {
