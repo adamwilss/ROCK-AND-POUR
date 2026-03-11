@@ -244,7 +244,7 @@ export default function Home() {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
-              <h2>ROCK <span className="gold-text">&amp;</span> POUR</h2>
+              <img src="/title-logo-transparent.png" alt="ROCK & POUR" className="footer-logo-img" />
               <p>An exclusive live music and premium drink experience.</p>
             </div>
             <div className="footer-links">
