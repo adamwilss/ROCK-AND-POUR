@@ -165,8 +165,8 @@ export default function Home() {
         <div className="container">
           <div className="experience-grid">
             <div className="experience-text scroll-reveal">
-              <p className="section-overline">The Experience</p>
-              <h2 className="section-title">An Evening of <span className="gold-text"><Typewriter text={["Music","Friends","Anthems","Energy","Drinks","Dance","Revelry","Nostalgia","Celebration"]} speed={160} deleteSpeed={90} waitTime={4000} /></span></h2>
+              <p className="section-overline">One Ticket. Everything Included.</p>
+              <h2 className="section-title">An Evening of <span className="gold-text"><Typewriter text={["Anthems","Energy","Revelry","Nostalgia","Indie","Dance"]} speed={160} deleteSpeed={90} waitTime={4000} /></span></h2>
               <div className="gold-rule-left" />
               <p className="section-desc">
                 Rock &amp; Pour is a high-energy live music night where your £55 ticket includes all your drinks. Enjoy outstanding bands playing indie rock, Britpop and 90s anthems in an immersive party atmosphere.
@@ -200,7 +200,7 @@ export default function Home() {
                 />
                 <div className="glass-card overlay-card">
                   <div className="glass-card-rule" />
-                  <h4>&quot;The ultimate luxury night out in Cheshire.&quot;</h4>
+                  <h4>&quot;Your round&apos;s on us. All night.&quot;</h4>
                 </div>
               </div>
             </div>
@@ -214,7 +214,7 @@ export default function Home() {
           <p className="section-overline">All Included</p>
           <h2 className="section-title">The <span className="gold-text">Premium</span> Selection</h2>
           <div className="gold-divider"><span className="gold-diamond" /></div>
-          <p className="section-subtitle">Every drop included in your £55 ticket. No bar tab. No compromise.</p>
+          <p className="section-subtitle">Everything in your glass, all night. One price. No bar tab. No compromise.</p>
           <div className="drinks-grid">
             <div className="drink-card scroll-reveal delay-1">
               <div className="drink-card-accent" />
@@ -273,7 +273,7 @@ export default function Home() {
           <div className="footer-grid">
             <div className="footer-brand">
               <img src="/title-logo-transparent.png" alt="ROCK & POUR" className="footer-logo-img" />
-              <p>An exclusive live music and premium drink experience.</p>
+              <p>Live music. All-inclusive drinks. A room full of people there for a proper night out.</p>
             </div>
             <div className="footer-links">
               <h4>Quick Links</h4>
