@@ -72,6 +72,12 @@ a {
     text-align: center;
 }
 
+.typewriter-line {
+    display: block;
+    min-height: 1.2em;
+    white-space: nowrap;
+}
+
 .typewriter-cursor {
     color: var(--color-gold);
     animation: cursorBlink 0.8s step-end infinite;

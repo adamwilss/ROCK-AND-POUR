@@ -167,7 +167,10 @@ export default function Home() {
           <div className="experience-grid">
             <div className="experience-text scroll-reveal">
               <p className="section-overline">One Ticket. Everything Included.</p>
-              <h2 className="section-title">An Evening of <span className="gold-text"><Typewriter text={["Anthems","Energy","Revelry","Nostalgia","Indie","Dance"]} speed={160} deleteSpeed={90} waitTime={4000} /></span></h2>
+              <h2 className="section-title">
+                An Evening of
+                <span className="typewriter-line"><span className="gold-text"><Typewriter text={["Anthems","Energy","Revelry","Nostalgia","Indie","Dance"]} speed={160} deleteSpeed={90} waitTime={4000} /></span></span>
+              </h2>
               <div className="gold-rule-left" />
               <p className="section-desc">
                 Rock &amp; Pour is a high-energy live music night where your £55 ticket includes all your drinks. Enjoy outstanding bands playing indie rock, Britpop and 90s anthems in an immersive party atmosphere.
