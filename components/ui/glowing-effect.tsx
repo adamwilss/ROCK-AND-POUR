@@ -62,7 +62,7 @@ const GlowingEffect = memo(
           const inactiveRadius = 0.5 * Math.min(width, height) * inactiveZone;
 
           if (distanceFromCenter < inactiveRadius) {
-            element.style.setProperty("--active", "0");
+            element.style.setProperty("--active", glow ? "1" : "0");
             return;
           }
 
@@ -72,9 +72,7 @@ const GlowingEffect = memo(
             mouseY > top - proximity &&
             mouseY < top + height + proximity;
 
-          element.style.setProperty("--active", isActive ? "1" : "0");
-
-          if (!isActive) return;
+          element.style.setProperty("--active", isActive ? "1" : glow ? "1" : "0");
 
           const currentAngle =
             parseFloat(element.style.getPropertyValue("--start")) || 0;
@@ -95,7 +93,7 @@ const GlowingEffect = memo(
           });
         });
       },
-      [inactiveZone, proximity, movementDuration]
+      [inactiveZone, proximity, movementDuration, glow]
     );
 
     useEffect(() => {
@@ -135,7 +133,7 @@ const GlowingEffect = memo(
               "--blur": `${blur}px`,
               "--spread": spread,
               "--start": "0",
-              "--active": "0",
+              "--active": glow ? "1" : "0",
               "--glowingeffect-border-width": `${borderWidth}px`,
               "--repeating-conic-gradient-times": "5",
               "--gradient":
@@ -170,7 +168,7 @@ const GlowingEffect = memo(
           <div
             className={cn(
               "glow",
-              "rounded-[inherit]",
+              "relative h-full rounded-[inherit]",
               'after:content-[""] after:rounded-[inherit] after:absolute after:inset-[calc(-1*var(--glowingeffect-border-width))]',
               "after:[border:var(--glowingeffect-border-width)_solid_transparent]",
               "after:[background:var(--gradient)] after:[background-attachment:fixed]",
