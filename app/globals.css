@@ -814,6 +814,7 @@ a {
     border-radius: 8px;
     padding: 1.5rem 2rem;
     display: inline-block;
+    position: relative;
     backdrop-filter: blur(5px);
     margin-bottom: 3rem;
 }
@@ -835,6 +836,10 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    border: 1px solid rgba(255, 184, 0, 0.1);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
 }
 
 .time-val {
