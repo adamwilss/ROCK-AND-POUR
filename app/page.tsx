@@ -4,6 +4,7 @@ import Image from "next/image";
 import { SmokeBackground } from "@/components/ui/spooky-smoke-animation";
 import { Typewriter } from "@/components/ui/typewriter";
 import { Beer, Wine, Sparkles, Flame } from "lucide-react";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 
 // Data Configuration
@@ -221,24 +222,28 @@ export default function Home() {
           <p className="section-subtitle">Everything in your glass, all night. One price. No bar tab. No compromise.</p>
           <div className="drinks-grid">
             <div className="drink-card scroll-reveal delay-1">
+              <GlowingEffect spread={40} glow={true} disabled={false} proximity={64} inactiveZone={0.01} borderWidth={2} />
               <div className="drink-card-accent" />
               <div className="drink-icon"><Beer size={36} strokeWidth={1.25} /></div>
               <h3>Premium Draught</h3>
               <p>Moretti, Cruz Campo &amp; Murphy&apos;s — poured properly, all night long.</p>
             </div>
             <div className="drink-card scroll-reveal delay-2">
+              <GlowingEffect spread={40} glow={true} disabled={false} proximity={64} inactiveZone={0.01} borderWidth={2} />
               <div className="drink-card-accent" />
               <div className="drink-icon"><Wine size={36} strokeWidth={1.25} /></div>
               <h3>Fine Wines</h3>
               <p>Sauvignon Blanc, quality reds &amp; rosés — proper wines served with care.</p>
             </div>
             <div className="drink-card scroll-reveal delay-3">
+              <GlowingEffect spread={40} glow={true} disabled={false} proximity={64} inactiveZone={0.01} borderWidth={2} />
               <div className="drink-card-accent" />
               <div className="drink-icon"><Sparkles size={36} strokeWidth={1.25} /></div>
               <h3>Prosecco</h3>
               <p>Premium prosecco flowing all evening — because every great night deserves a toast.</p>
             </div>
             <div className="drink-card scroll-reveal delay-4">
+              <GlowingEffect spread={40} glow={true} disabled={false} proximity={64} inactiveZone={0.01} borderWidth={2} />
               <div className="drink-card-accent" />
               <div className="drink-icon"><Flame size={36} strokeWidth={1.25} /></div>
               <h3>Premium Spirits</h3>

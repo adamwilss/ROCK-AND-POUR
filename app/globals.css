@@ -963,7 +963,6 @@ a {
     border-radius: 8px;
     transition: var(--transition);
     position: relative;
-    overflow: hidden;
 }
 
 .drink-card-accent {
