@@ -278,7 +278,7 @@ export default function Home() {
           </div>
           <div className="poster-cta scroll-reveal delay-2">
             <a href="https://www.skiddle.com/whats-on/Warrington/The-Bowdon-Rooms/Rock--Pour/42147525/" target="_blank" rel="noreferrer" className="btn btn-gold btn-large">GET YOUR TICKETS</a>
-            <p className="discount-note">Use code <span className="gold-text">ROCKS10</span> at checkout for 10% off</p>
+            <p className="discount-note">Use code <span className="gold-text">ROCK10</span> at checkout for 10% off</p>
           </div>
         </div>
       </section>
