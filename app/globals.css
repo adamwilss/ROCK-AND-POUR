@@ -646,8 +646,8 @@ a {
     mix-blend-mode: screen;
     overflow: hidden;
     /* Mask the sheen to text pixels only using the transparent PNG */
-    -webkit-mask-image: url('/title-logo-transparent.png');
-    mask-image: url('/title-logo-transparent.png');
+    -webkit-mask-image: url('/title-logo-transparent.webp');
+    mask-image: url('/title-logo-transparent.webp');
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
     -webkit-mask-repeat: no-repeat;

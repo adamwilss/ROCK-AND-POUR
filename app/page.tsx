@@ -95,7 +95,7 @@ export default function Home() {
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="navbar">
         <div className="nav-container">
           <a href="#" className="nav-logo">
-            <img src="/title-logo-transparent.png" alt="ROCK & POUR" className="nav-logo-img" />
+            <img src="/title-logo-transparent.webp" alt="ROCK & POUR" className="nav-logo-img" />
           </a>
           <div className={`nav-links ${menuActive ? 'active' : ''}`}>
             <a href="#experience" onClick={() => setMenuActive(false)}>The Experience</a>
@@ -129,7 +129,7 @@ export default function Home() {
           </h3>
           <div className="hero-title-img fade-up delay-1">
             <div className="title-img-wrap">
-              <img src="/title-logo-transparent.png" alt="ROCK & POUR" className="title-logo-img" />
+              <img src="/title-logo-transparent.webp" alt="ROCK & POUR" className="title-logo-img" />
               <div className="title-sheen" />
             </div>
           </div>
@@ -166,7 +166,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-crowd">
-          <img src="/crowd.png" alt="" aria-hidden="true" />
+          <img src="/crowd.webp" alt="" aria-hidden="true" />
         </div>
       </header>
 
@@ -208,7 +208,7 @@ export default function Home() {
             <div className="experience-image scroll-reveal delay-2">
               <div className="image-wrapper" id="drinks-image-wrapper" style={{ position: 'relative' }}>
                 <Image
-                  src="/drinks-img.png"
+                  src="/drinks-img.webp"
                   alt="Premium drinks at Rock & Pour"
                   fill
                   style={{ objectFit: 'cover' }}
@@ -271,9 +271,9 @@ export default function Home() {
           <div className="poster-pair scroll-reveal">
             <div className="poster-wrapper">
               <GlowingEffect spread={60} glow={true} disabled={false} proximity={80} inactiveZone={0.01} borderWidth={2} />
-              <div className="poster-container" onClick={() => setInspectedPoster('/POSTER.png')}>
+              <div className="poster-container" onClick={() => setInspectedPoster('/POSTER.webp')}>
                 <Image
-                  src="/POSTER.png"
+                  src="/POSTER.webp"
                   alt="Rock & Pour — April 10th 2026 at The Bowdon Rooms"
                   className="event-poster"
                   width={520}
@@ -284,9 +284,9 @@ export default function Home() {
             </div>
             <div className="poster-wrapper">
               <GlowingEffect spread={60} glow={true} disabled={false} proximity={80} inactiveZone={0.01} borderWidth={2} />
-              <div className="poster-container" onClick={() => setInspectedPoster('/band-poster.png')}>
+              <div className="poster-container" onClick={() => setInspectedPoster('/band-poster.webp')}>
                 <Image
-                  src="/band-poster.png"
+                  src="/band-poster.webp"
                   alt="Steven and the Holy Heathens — live at Rock & Pour"
                   className="event-poster"
                   width={520}
@@ -308,7 +308,7 @@ export default function Home() {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
-              <img src="/title-logo-transparent.png" alt="ROCK & POUR" className="footer-logo-img" />
+              <img src="/title-logo-transparent.webp" alt="ROCK & POUR" className="footer-logo-img" />
               <p>Live music. All-inclusive drinks. A room full of people there for a proper night out.</p>
             </div>
             <div className="footer-links">
