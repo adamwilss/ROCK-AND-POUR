@@ -240,7 +240,8 @@ export default function Home() {
             <div className="comparison-card comparison-card--rp">
               <GlowingEffect spread={50} glow={true} disabled={false} proximity={72} inactiveZone={0.01} borderWidth={2} />
               <div className="comparison-card-header">
-                <h3>Rock &amp; Pour — One Ticket</h3>
+                <img src="/title-logo-transparent.webp" alt="Rock & Pour" className="comparison-logo" />
+                <p className="comparison-logo-text">One Ticket</p>
               </div>
               <ul className="comparison-list">
                 <li className="comparison-item comparison-item--included">

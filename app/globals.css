@@ -1577,6 +1577,22 @@ a {
     font-weight: 700;
 }
 
+.comparison-logo {
+    height: 50px;
+    width: auto;
+    display: block;
+    margin-bottom: 0.8rem;
+    filter: drop-shadow(0 0 8px rgba(255, 184, 0, 0.3));
+}
+
+.comparison-logo-text {
+    color: var(--color-gold);
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
 .comparison-list {
     list-style: none;
     display: flex;
