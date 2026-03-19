@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { SmokeBackground } from "@/components/ui/spooky-smoke-animation";
 import { Typewriter } from "@/components/ui/typewriter";
 import { Beer, Wine, Sparkles, Flame } from "lucide-react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
@@ -50,41 +49,9 @@ function Countdown({ targetDate }: { targetDate: string }) {
 }
 
 export default function Home() {
-  const [scrolled, setScrolled] = useState(false);
-  const [menuActive, setMenuActive] = useState(false);
   const [inspectedPoster, setInspectedPoster] = useState<string | null>(null);
 
   const targetEvent = eventsData.find(e => !e.soldOut && new Date(e.date).getTime() > new Date().getTime()) || eventsData[0];
-
-  useEffect(() => {
-    let ticking = false;
-    const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          setScrolled(window.scrollY > 50);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const reveals = document.querySelectorAll('.scroll-reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-    reveals.forEach(el => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setInspectedPoster(null); };
@@ -111,29 +78,6 @@ export default function Home() {
 
   return (
     <>
-      {/* Site-wide atmospheric smoke — fixed behind all sections */}
-      <div className="site-smoke">
-        <SmokeBackground smokeColor="#9A5000" />
-      </div>
-
-      {/* Navigation */}
-      <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="navbar">
-        <div className="nav-container">
-          <a href="#" className="nav-logo">
-            <img src="/title-logo-transparent.webp" alt="ROCK & POUR" className="nav-logo-img" />
-          </a>
-          <div className={`nav-links ${menuActive ? 'active' : ''}`}>
-            <a href="#experience" onClick={() => setMenuActive(false)}>The Experience</a>
-            <a href="#drinks" onClick={() => setMenuActive(false)}>Premium Drinks</a>
-            <a href="#events" onClick={() => setMenuActive(false)}>Upcoming</a>
-            <a href="https://www.thebowdonrooms.co.uk" target="_blank" rel="noreferrer" className="nav-link-external">The Bowdon Rooms</a>
-            <a href="https://www.skiddle.com/whats-on/Warrington/The-Bowdon-Rooms/Rock--Pour/42147525/" target="_blank" rel="noreferrer" className="btn btn-outline-gold nav-cta">Buy Tickets</a>
-          </div>
-          <div className={`mobile-menu-btn ${menuActive ? 'active' : ''}`} onClick={() => setMenuActive(!menuActive)}>
-            <span></span><span></span><span></span>
-          </div>
-        </div>
-      </nav>
 
       {/* Hero Section */}
       <header className="hero" id="hero">
@@ -146,7 +90,7 @@ export default function Home() {
         <div className="hero-haze" />
         <div id="hero-particles" className="hero-particles"></div>
         <div className="hero-content">
-          <h1 className="sr-only">Rock &amp; Pour — Live Rock Music &amp; Premium Drinks Night at The Bowdon Rooms</h1>
+          <h1 className="sr-only">Rock &amp; Pour — Your Entire Night Out. One Ticket. Live Band, Unlimited Beer, Wine &amp; Spirits at The Bowdon Rooms</h1>
           <h3 className="hero-subtitle fade-up">
             <span className="subtitle-line" />
             AT THE BOWDON ROOMS
@@ -163,6 +107,10 @@ export default function Home() {
             <span>{targetEvent.month.toUpperCase()} {targetEvent.day}TH • {targetEvent.year}</span> • <span>{targetEvent.time}</span>
           </div>
 
+          <div className="hero-tagline fade-up delay-2b">
+            Live Band &bull; Unlimited Beer, Wine &amp; Spirits &bull; All Inclusive
+          </div>
+
           <div className="countdown-container fade-up delay-3">
             <GlowingEffect spread={60} glow={true} disabled={false} proximity={80} inactiveZone={0.01} borderWidth={2} />
             <p className="countdown-label">TICKETS SELLING FAST</p>
@@ -170,7 +118,8 @@ export default function Home() {
           </div>
 
           <div className="hero-actions fade-up delay-4">
-            <a href="https://www.skiddle.com/whats-on/Warrington/The-Bowdon-Rooms/Rock--Pour/42147525/" target="_blank" rel="noreferrer" className="btn btn-gold btn-large">GET YOUR TICKETS</a>
+            <a href="https://www.skiddle.com/whats-on/Warrington/The-Bowdon-Rooms/Rock--Pour/42147525/" target="_blank" rel="noreferrer" className="btn btn-gold btn-large">GET YOUR TICKETS — £55</a>
+            <p className="box-office-note">Or call the box office and save £10 — <a href="tel:01619268992">0161 926 8992</a></p>
           </div>
         </div>
         <div className="hero-crowd">
@@ -228,6 +177,102 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Terry's Story Section */}
+      <section className="terrys-story section" id="terrys-story">
+        <div className="container">
+          <div className="story-inner scroll-reveal">
+            <p className="section-overline">How It Started</p>
+            <h2 className="section-title">The Night That <span className="gold-text">Changed Everything</span></h2>
+            <div className="gold-rule-left" />
+            <div className="story-body">
+              <p className="story-paragraph">One Saturday night in Manchester, Terry found himself bouncing between venues. An hour&apos;s queue here. A £14 cocktail there. A cover charge that went up at the door. By midnight he&apos;d spent £60 and was still looking for somewhere decent to settle.</p>
+              <p className="story-paragraph">It was the kind of night that should have been brilliant — mates, music, city centre — but it was being chipped away at from every direction. No single venue was giving him what he actually wanted: a proper atmosphere, a great live band, and drinks without the drama.</p>
+              <blockquote className="story-quote">
+                <span className="gold-text">&quot;I wanted a night where you could just arrive, enjoy yourself, and never have to think about money again until you got home.&quot;</span>
+                <cite>— Terry, Founder</cite>
+              </blockquote>
+              <p className="story-paragraph">Rock &amp; Pour was built on that frustration. One room. One band. One ticket that covers everything. You know exactly what you&apos;re spending before you arrive, so the only thing left to do is enjoy it.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison Section */}
+      <section className="comparison section dark-bg" id="value">
+        <div className="container">
+          <div className="text-center scroll-reveal">
+            <p className="section-overline">Do The Maths</p>
+            <h2 className="section-title">A <span className="gold-text">Normal Night Out</span> vs Rock &amp; Pour</h2>
+            <div className="gold-divider"><span className="gold-diamond" /></div>
+          </div>
+          <div className="comparison-grid scroll-reveal">
+            {/* Left column — Normal Night Out */}
+            <div className="comparison-card comparison-card--normal">
+              <div className="comparison-card-header">
+                <h3>A Normal Night Out</h3>
+              </div>
+              <ul className="comparison-list">
+                <li className="comparison-item comparison-item--cost">
+                  <span>4–6 drinks</span><span>£25–£40</span>
+                </li>
+                <li className="comparison-item comparison-item--cost">
+                  <span>Entry / entertainment</span><span>£5–£15</span>
+                </li>
+                <li className="comparison-item comparison-item--cost">
+                  <span>Queue time</span><span>Up to 1hr</span>
+                </li>
+                <li className="comparison-item comparison-item--cost">
+                  <span>Surprise round bill</span><span>???</span>
+                </li>
+              </ul>
+              <div className="comparison-total comparison-total--normal">
+                Total: £40–£70+
+              </div>
+            </div>
+
+            {/* Right column — Rock & Pour */}
+            <div className="comparison-card comparison-card--rp">
+              <GlowingEffect spread={50} glow={true} disabled={false} proximity={72} inactiveZone={0.01} borderWidth={2} />
+              <div className="comparison-card-header">
+                <h3>Rock &amp; Pour — One Ticket</h3>
+              </div>
+              <ul className="comparison-list">
+                <li className="comparison-item comparison-item--included">
+                  <span>Live band all night</span><span>✓</span>
+                </li>
+                <li className="comparison-item comparison-item--included">
+                  <span>Unlimited premium draught</span><span>✓</span>
+                </li>
+                <li className="comparison-item comparison-item--included">
+                  <span>Unlimited wines</span><span>✓</span>
+                </li>
+                <li className="comparison-item comparison-item--included">
+                  <span>Unlimited spirits</span><span>✓</span>
+                </li>
+                <li className="comparison-item comparison-item--included">
+                  <span>Soft drinks</span><span>✓</span>
+                </li>
+                <li className="comparison-item comparison-item--included">
+                  <span>Full night access, no queues</span><span>✓</span>
+                </li>
+              </ul>
+              <div className="comparison-total comparison-total--rp">
+                £55 online · £45 via box office
+              </div>
+            </div>
+          </div>
+
+          <p className="comparison-footnote scroll-reveal">
+            Planning a night out with mates? Sort it upfront. No awkward splits, no surprise bar tabs — just know what you&apos;re spending before you leave the house. Even the taxi is easier to plan.
+          </p>
+          <div className="comparison-cta text-center scroll-reveal">
+            <a href="https://www.skiddle.com/whats-on/Warrington/The-Bowdon-Rooms/Rock--Pour/42147525/" target="_blank" rel="noreferrer" className="btn btn-gold btn-large">
+              GET YOUR TICKETS — £55
+            </a>
           </div>
         </div>
       </section>
@@ -323,6 +368,7 @@ export default function Home() {
               <h4>Quick Links</h4>
               <a href="#experience">The Experience</a>
               <a href="#drinks">Drinks Menu</a>
+              <a href="/house-rules">House Rules</a>
               <a href="https://www.skiddle.com/whats-on/Warrington/The-Bowdon-Rooms/Rock--Pour/42147525/" target="_blank" rel="noreferrer">Tickets</a>
             </div>
             <div className="footer-contact">

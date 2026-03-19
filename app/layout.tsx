@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Navbar } from "@/components/ui/navbar";
+import { SmokeBackground } from "@/components/ui/spooky-smoke-animation";
+import { ScrollRevealInit } from "@/components/ui/scroll-reveal-init";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.rockandpour.co.uk"),
@@ -97,6 +100,11 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
+        <div className="site-smoke">
+          <SmokeBackground smokeColor="#9A5000" />
+        </div>
+        <Navbar />
+        <ScrollRevealInit />
         {children}
         <Analytics />
         <SpeedInsights />

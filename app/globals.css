@@ -1440,6 +1440,277 @@ a {
     transition-delay: 1.0s;
 }
 
+.delay-2b {
+    animation-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+/* Hero Tagline */
+.hero-tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.60);
+    font-weight: 500;
+    margin-bottom: 1.8rem;
+}
+
+/* Box Office Note */
+.box-office-note {
+    font-size: 0.85rem;
+    color: var(--color-gold);
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.box-office-note a {
+    color: var(--color-gold);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.box-office-note a:hover {
+    color: #FFC933;
+}
+
+/* Terry's Story Section */
+.terrys-story {
+    background: linear-gradient(160deg, #0a0804 0%, var(--color-bg) 100%);
+}
+
+.story-inner {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.story-body {
+    margin-top: 2rem;
+}
+
+.story-paragraph {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    line-height: 1.85;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-body);
+}
+
+.story-quote {
+    border-left: 3px solid var(--color-gold);
+    padding: 1.2rem 0 1.2rem 2rem;
+    margin: 2.5rem 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.story-quote cite {
+    display: block;
+    margin-top: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    font-style: normal;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+}
+
+/* Comparison Section */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 3rem 0 2rem;
+}
+
+.comparison-card {
+    position: relative;
+    border-radius: 8px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 184, 0, 0.12);
+}
+
+.comparison-card--normal {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.comparison-card--rp {
+    background: rgba(255, 184, 0, 0.04);
+    border-color: rgba(255, 184, 0, 0.25);
+}
+
+.comparison-card-header {
+    padding-bottom: 1.2rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid rgba(255, 184, 0, 0.12);
+}
+
+.comparison-card--normal .comparison-card-header h3 {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+}
+
+.comparison-card--rp .comparison-card-header h3 {
+    color: var(--color-gold);
+    font-size: 1.1rem;
+}
+
+.comparison-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.comparison-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.comparison-item--cost span:first-child {
+    color: var(--color-text-muted);
+}
+
+.comparison-item--cost span:last-child {
+    color: rgba(220, 80, 80, 0.85);
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.comparison-item--included span:first-child {
+    color: var(--color-text);
+}
+
+.comparison-item--included span:last-child {
+    color: var(--color-gold);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.comparison-total {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 184, 0, 0.15);
+}
+
+.comparison-total--normal {
+    color: rgba(220, 80, 80, 0.85);
+}
+
+.comparison-total--rp {
+    color: var(--color-gold);
+}
+
+.comparison-footnote {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.98rem;
+    line-height: 1.75;
+    max-width: 620px;
+    margin: 0 auto 2.5rem;
+}
+
+.comparison-cta {
+    margin-top: 1rem;
+}
+
+/* House Rules Page */
+.house-rules-page {
+    padding-top: 80px;
+}
+
+.house-rules-hero {
+    padding: 5rem 0 3rem;
+    background: linear-gradient(160deg, #0a0804 0%, var(--color-bg) 100%);
+}
+
+.house-rules-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.house-rules-intro {
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.rules-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.rule-card {
+    background: rgba(255, 184, 0, 0.03);
+    border: 1px solid rgba(255, 184, 0, 0.18);
+    border-radius: 8px;
+    padding: 2rem;
+    position: relative;
+    transition: border-color 0.3s ease;
+}
+
+.rule-card:hover {
+    border-color: rgba(255, 184, 0, 0.35);
+}
+
+.rule-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: rgba(255, 184, 0, 0.18);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.rule-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--color-gold);
+    margin-bottom: 0.75rem;
+}
+
+.rule-card p {
+    color: var(--color-text-muted);
+    font-size: 0.98rem;
+    line-height: 1.7;
+}
+
+.house-rules-cta {
+    padding: 4rem 0;
+}
+
+.box-office-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-gold);
+}
+
+.box-office-link a {
+    color: var(--color-gold);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.box-office-link a:hover {
+    color: #FFC933;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .experience-grid {
@@ -1547,6 +1818,18 @@ a {
 
     .stats-strip {
         max-width: 100%;
+    }
+
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rules-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .house-rules-title {
+        font-size: 3.5rem;
     }
 
     .footer-brand p {
