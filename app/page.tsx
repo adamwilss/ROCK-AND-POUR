@@ -204,7 +204,7 @@ export default function Home() {
       <section className="comparison section dark-bg" id="value">
         <div className="container">
           <div className="text-center scroll-reveal">
-            <h2 className="section-title">Do The <span className="gold-text">Math</span></h2>
+            <h2 className="section-title">See The <span className="gold-text">Difference</span></h2>
             <p className="comparison-subtitle">A Normal Night Out vs Rock &amp; Pour</p>
             <div className="gold-divider"><span className="gold-diamond" /></div>
           </div>

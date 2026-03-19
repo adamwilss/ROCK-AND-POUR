@@ -1684,18 +1684,19 @@ a {
 }
 
 .comparison-table thead {
-    background: rgba(255, 184, 0, 0.08);
-    border-bottom: 2px solid rgba(255, 184, 0, 0.25);
+    background: linear-gradient(90deg, rgba(255, 184, 0, 0.12), rgba(255, 184, 0, 0.04));
+    border-bottom: 3px solid var(--color-gold);
 }
 
 .comparison-table thead th {
-    padding: 2rem 1.5rem;
+    padding: 2.5rem 1.5rem;
     text-align: left;
     font-family: 'Playfair Display', serif;
-    font-size: 1.15rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 800;
     color: var(--color-text);
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
 }
 
 .comparison-table thead th:first-child {
@@ -1746,47 +1747,52 @@ a {
 }
 
 .comparison-table tbody td {
-    padding: 1.5rem;
-    font-size: 1rem;
+    padding: 1.75rem 1.5rem;
+    font-size: 0.95rem;
     color: var(--color-text);
+    line-height: 1.5;
 }
 
 .comparison-table .row-label {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--color-text);
     min-width: 140px;
     width: 25%;
+    font-size: 0.98rem;
+    letter-spacing: 0.5px;
 }
 
 .comparison-table td.problem {
-    color: rgba(220, 80, 80, 0.9);
-    font-weight: 600;
+    color: #ff6b6b;
+    font-weight: 700;
     position: relative;
-    padding-left: 2rem;
-    background: linear-gradient(90deg, rgba(220, 80, 80, 0.03), transparent);
+    padding-left: 2.5rem;
+    background: linear-gradient(90deg, rgba(220, 80, 80, 0.08), transparent);
 }
 
 .comparison-table td.problem::before {
     content: '✗';
     position: absolute;
-    left: 1rem;
-    font-size: 1.2rem;
-    opacity: 0.6;
+    left: 1.2rem;
+    font-size: 1.3rem;
+    color: #ff6b6b;
+    font-weight: 700;
+    opacity: 0.9;
 }
 
 .comparison-table td.included {
     color: var(--color-gold);
-    font-weight: 600;
+    font-weight: 700;
     position: relative;
-    padding-left: 2rem;
-    background: linear-gradient(90deg, rgba(255, 184, 0, 0.03), transparent);
+    padding-left: 2.5rem;
+    background: linear-gradient(90deg, rgba(255, 184, 0, 0.06), transparent);
 }
 
 .comparison-table td.included::before {
     content: '✓';
     position: absolute;
-    left: 1rem;
-    font-size: 1.2rem;
+    left: 1.2rem;
+    font-size: 1.3rem;
     color: var(--color-gold);
     font-weight: 700;
 }
@@ -1822,31 +1828,33 @@ a {
 }
 
 .cost-bar {
-    height: 8px;
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.1);
+    height: 12px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.08);
     overflow: hidden;
     position: relative;
-    animation: slideIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    animation: barFill 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .cost-bar-problem {
-    background: linear-gradient(90deg, rgba(220, 80, 80, 0.4), rgba(220, 80, 80, 0.6));
-    box-shadow: 0 0 12px rgba(220, 80, 80, 0.3);
+    background: linear-gradient(90deg, #dc5050, #ff6b6b);
+    box-shadow: 0 0 20px rgba(220, 80, 80, 0.6), inset 0 0 8px rgba(255, 255, 255, 0.1);
 }
 
 .cost-bar-gold {
-    background: linear-gradient(90deg, rgba(255, 184, 0, 0.4), rgba(255, 184, 0, 0.7));
-    box-shadow: 0 0 12px rgba(255, 184, 0, 0.3);
+    background: linear-gradient(90deg, #FFB800, #FFD94D);
+    box-shadow: 0 0 20px rgba(255, 184, 0, 0.6), inset 0 0 8px rgba(255, 255, 255, 0.15);
 }
 
-@keyframes slideIn {
+@keyframes barFill {
     from {
-        width: 0 !important;
+        width: 0;
         opacity: 0;
+        box-shadow: 0 0 0px rgba(255, 184, 0, 0);
     }
     to {
         opacity: 1;
+        box-shadow: 0 0 20px currentColor;
     }
 }
 
