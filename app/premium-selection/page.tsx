@@ -88,60 +88,91 @@ export default function PremiumSelection() {
         </div>
       </section>
 
-      {/* All Drinks Showcase — Scrolling */}
+      {/* All Drinks Showcase — Categorized */}
       <section className="drinks-showcase section">
         <div className="container">
-          <div className="scroll-reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
+          <div className="scroll-reveal" style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <p className="section-overline">The Full Bar</p>
             <h2 className="section-title">Every <span className="gold-text">Brand</span> Included</h2>
+            <p className="section-subtitle">40+ premium brands. Unlimited pours. One night. No limits.</p>
           </div>
-          <div className="drinks-scroll-wrapper">
-            <div className="drinks-scroll">
-              <div className="drink-badge drink-badge--featured">Murphy&apos;s Neck Oil</div>
-              <div className="drink-badge drink-badge--featured">Moretti</div>
-              <div className="drink-badge">Damn Lemon</div>
-              <div className="drink-badge">Cruz Campo</div>
-              <div className="drink-badge">Guinness</div>
-              <div className="drink-badge">Guinness Zero</div>
-              <div className="drink-badge">Budweiser</div>
-              <div className="drink-badge">Corona</div>
-              <div className="drink-badge">Stella</div>
-              <div className="drink-badge">Peroni Zero</div>
-              <div className="drink-badge">Gordon&apos;s 0%</div>
-              <div className="drink-badge">Gordon&apos;s Dry</div>
-              <div className="drink-badge">White Peach</div>
-              <div className="drink-badge">Beefeater</div>
-              <div className="drink-badge">Whitley Gin</div>
-              <div className="drink-badge">Aperol</div>
-              <div className="drink-badge">Disaronno</div>
-              <div className="drink-badge">Velvet</div>
-              <div className="drink-badge">Malibu</div>
-              <div className="drink-badge">Bacardi</div>
-              <div className="drink-badge">Havana Club</div>
-              <div className="drink-badge">Absolut Citrus</div>
-              <div className="drink-badge">Absolut Vanilla</div>
-              <div className="drink-badge">Captain Morgan</div>
-              <div className="drink-badge">Kraken</div>
-              <div className="drink-badge">Jameson</div>
-              <div className="drink-badge">Jack Daniels</div>
-              <div className="drink-badge">Southern Comfort</div>
-              <div className="drink-badge">Kopparberg</div>
-              <div className="drink-badge">J2O</div>
-              <div className="drink-badge">Fanta</div>
-              <div className="drink-badge">Pink Ting</div>
-              <div className="drink-badge">Rioja</div>
-              <div className="drink-badge">Shiraz</div>
-              <div className="drink-badge">Malbec</div>
-              <div className="drink-badge">Prosecco</div>
-              <div className="drink-badge">Pinot Grigio</div>
-              <div className="drink-badge">Chardonnay</div>
-              <div className="drink-badge">Rosé</div>
-              {/* Duplicate for seamless scroll */}
-              <div className="drink-badge drink-badge--featured">Murphy&apos;s Neck Oil</div>
-              <div className="drink-badge drink-badge--featured">Moretti</div>
-              <div className="drink-badge">Damn Lemon</div>
-              <div className="drink-badge">Cruz Campo</div>
-              <div className="drink-badge">Guinness</div>
+
+          {/* Premium Draught */}
+          <div className="drinks-category scroll-reveal">
+            <div className="category-header">
+              <h3 className="category-title">🍺 Premium Draught</h3>
+              <p className="category-desc">Fresh, cold, poured properly</p>
+            </div>
+            <div className="drinks-grid-category">
+              <div className="drink-item drink-item--featured">Murphy&apos;s Neck Oil</div>
+              <div className="drink-item drink-item--featured">Moretti</div>
+              <div className="drink-item">Beavertown Neck Oil</div>
+              <div className="drink-item">Cruz Campo</div>
+              <div className="drink-item">Guinness</div>
+              <div className="drink-item">Guinness Zero</div>
+              <div className="drink-item">Budweiser</div>
+              <div className="drink-item">Corona</div>
+              <div className="drink-item">Stella</div>
+              <div className="drink-item">Peroni Zero</div>
+            </div>
+          </div>
+
+          {/* Premium Spirits */}
+          <div className="drinks-category scroll-reveal">
+            <div className="category-header">
+              <h3 className="category-title">🥃 Premium Spirits</h3>
+              <p className="category-desc">Top-shelf gins, vodkas, rum &amp; whiskey</p>
+            </div>
+            <div className="drinks-grid-category">
+              <div className="drink-item">Gordon&apos;s 0%</div>
+              <div className="drink-item">Gordon&apos;s Dry</div>
+              <div className="drink-item">White Peach</div>
+              <div className="drink-item">Beefeater</div>
+              <div className="drink-item">Whitley Gin</div>
+              <div className="drink-item">Aperol</div>
+              <div className="drink-item">Disaronno</div>
+              <div className="drink-item">Velvet</div>
+              <div className="drink-item">Malibu</div>
+              <div className="drink-item">Bacardi</div>
+              <div className="drink-item">Havana Club</div>
+              <div className="drink-item">Absolut Citrus</div>
+              <div className="drink-item">Absolut Vanilla</div>
+              <div className="drink-item">Captain Morgan</div>
+              <div className="drink-item">Kraken</div>
+              <div className="drink-item">Jameson</div>
+              <div className="drink-item">Jack Daniels</div>
+              <div className="drink-item">Southern Comfort</div>
+            </div>
+          </div>
+
+          {/* Fine Wines */}
+          <div className="drinks-category scroll-reveal">
+            <div className="category-header">
+              <h3 className="category-title">🍷 Fine Wines</h3>
+              <p className="category-desc">Reds, whites, rosés &amp; bubbles</p>
+            </div>
+            <div className="drinks-grid-category">
+              <div className="drink-item">Rioja</div>
+              <div className="drink-item">Shiraz</div>
+              <div className="drink-item">Malbec</div>
+              <div className="drink-item">Prosecco</div>
+              <div className="drink-item">Pinot Grigio</div>
+              <div className="drink-item">Chardonnay</div>
+              <div className="drink-item">Rosé</div>
+            </div>
+          </div>
+
+          {/* Soft Drinks */}
+          <div className="drinks-category scroll-reveal">
+            <div className="category-header">
+              <h3 className="category-title">🥤 Soft Drinks &amp; Mixers</h3>
+              <p className="category-desc">Premium mixers &amp; alcohol-free options</p>
+            </div>
+            <div className="drinks-grid-category">
+              <div className="drink-item">Kopparberg</div>
+              <div className="drink-item">J2O</div>
+              <div className="drink-item">Fanta</div>
+              <div className="drink-item">Pink Ting</div>
             </div>
           </div>
         </div>
