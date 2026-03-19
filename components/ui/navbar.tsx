@@ -29,8 +29,7 @@ export function Navbar() {
         </a>
         <div className={`nav-links ${menuActive ? 'active' : ''}`}>
           <a href="/#experience" onClick={() => setMenuActive(false)}>The Experience</a>
-          <a href="/#drinks" onClick={() => setMenuActive(false)}>Premium Drinks</a>
-          <a href="/#events" onClick={() => setMenuActive(false)}>Upcoming</a>
+          <a href="/premium-selection" onClick={() => setMenuActive(false)}>Premium Selection</a>
           <a href="/house-rules" onClick={() => setMenuActive(false)}>House Rules</a>
           <a href="https://www.thebowdonrooms.co.uk" target="_blank" rel="noreferrer" className="nav-link-external">The Bowdon Rooms</a>
           <a href="https://www.skiddle.com/whats-on/Warrington/The-Bowdon-Rooms/Rock--Pour/42147525/" target="_blank" rel="noreferrer" className="btn btn-outline-gold nav-cta">Buy Tickets</a>
