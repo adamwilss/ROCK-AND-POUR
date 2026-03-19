@@ -103,17 +103,30 @@ export default function PremiumSelection() {
               <h3 className="category-title">🍺 Premium Draught</h3>
               <p className="category-desc">Fresh, cold, poured properly</p>
             </div>
-            <div className="drinks-grid-category">
-              <div className="drink-item drink-item--featured">Murphy&apos;s Neck Oil</div>
-              <div className="drink-item drink-item--featured">Moretti</div>
-              <div className="drink-item">Beavertown Neck Oil</div>
-              <div className="drink-item">Cruz Campo</div>
-              <div className="drink-item">Guinness</div>
-              <div className="drink-item">Guinness Zero</div>
-              <div className="drink-item">Budweiser</div>
-              <div className="drink-item">Corona</div>
-              <div className="drink-item">Stella</div>
-              <div className="drink-item">Peroni Zero</div>
+
+            {/* Lagers */}
+            <div className="drinks-subcategory">
+              <h4 className="subcategory-title">Lagers</h4>
+              <div className="drinks-grid-category">
+                <div className="drink-item">Beavertown Neck Oil</div>
+                <div className="drink-item">Budweiser</div>
+                <div className="drink-item">Corona</div>
+                <div className="drink-item">Cruz Campo</div>
+                <div className="drink-item">Damn Lemon</div>
+                <div className="drink-item drink-item--featured">Moretti</div>
+                <div className="drink-item drink-item--featured">Murphy&apos;s Neck Oil</div>
+                <div className="drink-item">Peroni Zero</div>
+                <div className="drink-item">Stella</div>
+              </div>
+            </div>
+
+            {/* Stouts */}
+            <div className="drinks-subcategory">
+              <h4 className="subcategory-title">Stouts</h4>
+              <div className="drinks-grid-category">
+                <div className="drink-item">Guinness</div>
+                <div className="drink-item">Guinness Zero</div>
+              </div>
             </div>
           </div>
 
@@ -121,44 +134,103 @@ export default function PremiumSelection() {
           <div className="drinks-category scroll-reveal">
             <div className="category-header">
               <h3 className="category-title">🥃 Premium Spirits</h3>
-              <p className="category-desc">Top-shelf gins, vodkas, rum &amp; whiskey</p>
+              <p className="category-desc">Top-shelf selection across all spirit categories</p>
             </div>
-            <div className="drinks-grid-category">
-              <div className="drink-item">Gordon&apos;s 0%</div>
-              <div className="drink-item">Gordon&apos;s Dry</div>
-              <div className="drink-item">White Peach</div>
-              <div className="drink-item">Beefeater</div>
-              <div className="drink-item">Whitley Gin</div>
-              <div className="drink-item">Aperol</div>
-              <div className="drink-item">Disaronno</div>
-              <div className="drink-item">Velvet</div>
-              <div className="drink-item">Malibu</div>
-              <div className="drink-item">Bacardi</div>
-              <div className="drink-item">Havana Club</div>
-              <div className="drink-item">Absolut Citrus</div>
-              <div className="drink-item">Absolut Vanilla</div>
-              <div className="drink-item">Captain Morgan</div>
-              <div className="drink-item">Kraken</div>
-              <div className="drink-item">Jameson</div>
-              <div className="drink-item">Jack Daniels</div>
-              <div className="drink-item">Southern Comfort</div>
+
+            {/* Gin */}
+            <div className="drinks-subcategory">
+              <h4 className="subcategory-title">Gin</h4>
+              <div className="drinks-grid-category">
+                <div className="drink-item">Beefeater</div>
+                <div className="drink-item">Gordon&apos;s Dry</div>
+                <div className="drink-item">Gordon&apos;s 0%</div>
+                <div className="drink-item">White Peach</div>
+                <div className="drink-item">Whitley Gin</div>
+              </div>
+            </div>
+
+            {/* Vodka */}
+            <div className="drinks-subcategory">
+              <h4 className="subcategory-title">Vodka</h4>
+              <div className="drinks-grid-category">
+                <div className="drink-item">Absolut Citrus</div>
+                <div className="drink-item">Absolut Vanilla</div>
+              </div>
+            </div>
+
+            {/* Rum */}
+            <div className="drinks-subcategory">
+              <h4 className="subcategory-title">Rum</h4>
+              <div className="drinks-grid-category">
+                <div className="drink-item">Bacardi</div>
+                <div className="drink-item">Captain Morgan</div>
+                <div className="drink-item">Havana Club</div>
+                <div className="drink-item">Kraken</div>
+              </div>
+            </div>
+
+            {/* Whiskey */}
+            <div className="drinks-subcategory">
+              <h4 className="subcategory-title">Whiskey</h4>
+              <div className="drinks-grid-category">
+                <div className="drink-item">Jack Daniels</div>
+                <div className="drink-item">Jameson</div>
+                <div className="drink-item">Southern Comfort</div>
+              </div>
+            </div>
+
+            {/* Liqueurs &amp; Other */}
+            <div className="drinks-subcategory">
+              <h4 className="subcategory-title">Liqueurs &amp; Other</h4>
+              <div className="drinks-grid-category">
+                <div className="drink-item">Aperol</div>
+                <div className="drink-item">Disaronno</div>
+                <div className="drink-item">Malibu</div>
+                <div className="drink-item">Velvet</div>
+              </div>
             </div>
           </div>
 
-          {/* Fine Wines */}
+          {/* Wines */}
           <div className="drinks-category scroll-reveal">
             <div className="category-header">
-              <h3 className="category-title">🍷 Fine Wines</h3>
-              <p className="category-desc">Reds, whites, rosés &amp; bubbles</p>
+              <h3 className="category-title">🍷 Wines</h3>
+              <p className="category-desc">Reds, whites, rosés &amp; sparkling</p>
             </div>
-            <div className="drinks-grid-category">
-              <div className="drink-item">Rioja</div>
-              <div className="drink-item">Shiraz</div>
-              <div className="drink-item">Malbec</div>
-              <div className="drink-item">Prosecco</div>
-              <div className="drink-item">Pinot Grigio</div>
-              <div className="drink-item">Chardonnay</div>
-              <div className="drink-item">Rosé</div>
+
+            {/* Red Wines */}
+            <div className="drinks-subcategory">
+              <h4 className="subcategory-title">Red</h4>
+              <div className="drinks-grid-category">
+                <div className="drink-item">Malbec</div>
+                <div className="drink-item">Rioja</div>
+                <div className="drink-item">Shiraz</div>
+              </div>
+            </div>
+
+            {/* White Wines */}
+            <div className="drinks-subcategory">
+              <h4 className="subcategory-title">White</h4>
+              <div className="drinks-grid-category">
+                <div className="drink-item">Chardonnay</div>
+                <div className="drink-item">Pinot Grigio</div>
+              </div>
+            </div>
+
+            {/* Rosé */}
+            <div className="drinks-subcategory">
+              <h4 className="subcategory-title">Rosé</h4>
+              <div className="drinks-grid-category">
+                <div className="drink-item">Rosé</div>
+              </div>
+            </div>
+
+            {/* Sparkling */}
+            <div className="drinks-subcategory">
+              <h4 className="subcategory-title">Sparkling</h4>
+              <div className="drinks-grid-category">
+                <div className="drink-item">Prosecco</div>
+              </div>
             </div>
           </div>
 

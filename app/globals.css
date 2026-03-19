@@ -1817,6 +1817,26 @@ a {
     font-style: italic;
 }
 
+.drinks-subcategory {
+    margin-bottom: 2.5rem;
+}
+
+.drinks-subcategory:last-child {
+    margin-bottom: 0;
+}
+
+.subcategory-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255, 184, 0, 0.7);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(255, 184, 0, 0.1);
+}
+
 .drinks-grid-category {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
