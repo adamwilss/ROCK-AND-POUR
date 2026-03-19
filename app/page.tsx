@@ -217,20 +217,23 @@ export default function Home() {
               </div>
               <ul className="comparison-list">
                 <li className="comparison-item comparison-item--cost">
-                  <span>4–6 drinks</span><span>£25–£40</span>
+                  <span>Entry across venues</span><span>£5–£15 each</span>
                 </li>
                 <li className="comparison-item comparison-item--cost">
-                  <span>Entry / entertainment</span><span>£5–£15</span>
+                  <span>2–4 drinks per venue</span><span>£20–£80</span>
                 </li>
                 <li className="comparison-item comparison-item--cost">
-                  <span>Queue time</span><span>Up to 1hr</span>
+                  <span>Venue hopping &amp; queues</span><span>1–2 hours lost</span>
                 </li>
                 <li className="comparison-item comparison-item--cost">
-                  <span>Surprise round bill</span><span>???</span>
+                  <span>Group coordination chaos</span><span>People get lost</span>
+                </li>
+                <li className="comparison-item comparison-item--cost">
+                  <span>End-of-night regret</span><span>How much?!</span>
                 </li>
               </ul>
               <div className="comparison-total comparison-total--normal">
-                Total: £40–£70+
+                Total: £60–£120+
               </div>
             </div>
 

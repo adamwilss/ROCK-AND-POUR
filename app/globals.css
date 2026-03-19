@@ -207,7 +207,7 @@ a {
 }
 
 .section {
-    padding: 6rem 0;
+    padding: 8rem 0;
 }
 
 .dark-bg {
@@ -360,14 +360,14 @@ a {
     position: relative;
     z-index: 2; /* sits above the fixed site-smoke layer */
     height: 100vh;
-    min-height: 800px;
+    min-height: 900px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     overflow: hidden;
     background-color: #060402;
-    padding-bottom: 18vh;
+    padding-bottom: 20vh;
 }
 
 /* Fixed atmospheric smoke — sits behind sections, hero rises above it */
@@ -556,10 +556,11 @@ a {
     width: 100%;
     max-width: 1200px;
     padding: 0 2rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1.5rem;
 }
 
 .hero-subtitle {
@@ -863,6 +864,7 @@ a {
 /* Experience Section */
 .experience {
     background: linear-gradient(160deg, var(--color-bg) 0%, #0c0906 100%);
+    padding: 10rem 0 !important;
 }
 
 .experience-grid {
@@ -1477,6 +1479,7 @@ a {
 /* Terry's Story Section */
 .terrys-story {
     background: linear-gradient(160deg, #0a0804 0%, var(--color-bg) 100%);
+    padding: 10rem 0 !important;
 }
 
 .story-inner {
@@ -1518,11 +1521,15 @@ a {
 }
 
 /* Comparison Section */
+.comparison {
+    padding: 10rem 0 !important;
+}
+
 .comparison-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    margin: 3rem 0 2rem;
+    margin: 4rem 0 3rem;
 }
 
 .comparison-card {
