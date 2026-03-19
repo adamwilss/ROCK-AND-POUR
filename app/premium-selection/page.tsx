@@ -52,42 +52,6 @@ export default function PremiumSelection() {
         </div>
       </section>
 
-      {/* On Tap All Night — Hero Section */}
-      <section className="on-tap-hero section dark-bg">
-        <div className="container">
-          <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '3rem' }}>On Tap <span className="gold-text">All Night</span></h2>
-          <div className="on-tap-grid scroll-reveal">
-            <div className="on-tap-card on-tap-primary">
-              <div className="on-tap-badge">ON TAP ALL NIGHT</div>
-              <div className="on-tap-logo-wrapper">
-                <img src="/brands/murphys-logo.png" alt="Murphy's Irish Stout" className="on-tap-logo" />
-              </div>
-              <h3>Murphy&apos;s<br />Neck Oil</h3>
-              <p>Fresh, hoppy, all night long</p>
-            </div>
-            <div className="on-tap-card on-tap-primary">
-              <div className="on-tap-badge">ON TAP ALL NIGHT</div>
-              <div className="on-tap-logo-wrapper">
-                <img src="/brands/moretti-logo.png" alt="Birra Moretti" className="on-tap-logo" />
-              </div>
-              <h3>Moretti</h3>
-              <p>Classic Italian lager, poured cold</p>
-            </div>
-          </div>
-          <p className="on-tap-note scroll-reveal">Plus Damn Lemon, Cruz Campo, Guinness &amp; more on draft</p>
-          <div className="on-tap-secondary-row scroll-reveal">
-            <div className="on-tap-secondary-card">
-              <img src="/brands/beavertown-logo.png" alt="Beavertown Neck Oil" className="on-tap-secondary-logo" />
-              <p>Beavertown Neck Oil</p>
-            </div>
-            <div className="on-tap-secondary-card">
-              <img src="/brands/cruzcampo-logo.png" alt="Cruz Campo" className="on-tap-secondary-logo" />
-              <p>Cruz Campo</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* All Drinks Showcase — Categorized */}
       <section className="drinks-showcase section">
         <div className="container">
@@ -98,12 +62,13 @@ export default function PremiumSelection() {
           </div>
 
           {/* Premium Draught */}
-          <div className="drinks-category scroll-reveal">
-            <div className="category-header">
-              <h3 className="category-title">🍺 Premium Draught</h3>
+          <details className="drinks-category scroll-reveal">
+            <summary className="category-header">
+              <h3 className="category-title">
+                <span className="collapse-arrow">▶</span> 🍺 Premium Draught
+              </h3>
               <p className="category-desc">Fresh, cold, poured properly</p>
-            </div>
-
+            </summary>
             {/* Lagers */}
             <div className="drinks-subcategory">
               <h4 className="subcategory-title">Lagers</h4>
@@ -128,14 +93,16 @@ export default function PremiumSelection() {
                 <div className="drink-item">Guinness Zero</div>
               </div>
             </div>
-          </div>
+          </details>
 
           {/* Premium Spirits */}
-          <div className="drinks-category scroll-reveal">
-            <div className="category-header">
-              <h3 className="category-title">🥃 Premium Spirits</h3>
+          <details className="drinks-category scroll-reveal">
+            <summary className="category-header">
+              <h3 className="category-title">
+                <span className="collapse-arrow">▶</span> 🥃 Premium Spirits
+              </h3>
               <p className="category-desc">Top-shelf selection across all spirit categories</p>
-            </div>
+            </summary>
 
             {/* Gin */}
             <div className="drinks-subcategory">
@@ -144,7 +111,6 @@ export default function PremiumSelection() {
                 <div className="drink-item">Beefeater</div>
                 <div className="drink-item">Gordon&apos;s Dry</div>
                 <div className="drink-item">Gordon&apos;s 0%</div>
-                <div className="drink-item">White Peach</div>
                 <div className="drink-item">Whitley Gin</div>
               </div>
             </div>
@@ -189,15 +155,16 @@ export default function PremiumSelection() {
                 <div className="drink-item">Velvet</div>
               </div>
             </div>
-          </div>
+          </details>
 
           {/* Wines */}
-          <div className="drinks-category scroll-reveal">
-            <div className="category-header">
-              <h3 className="category-title">🍷 Wines</h3>
+          <details className="drinks-category scroll-reveal">
+            <summary className="category-header">
+              <h3 className="category-title">
+                <span className="collapse-arrow">▶</span> 🍷 Wines
+              </h3>
               <p className="category-desc">Reds, whites, rosés &amp; sparkling</p>
-            </div>
-
+            </summary>
             {/* Red Wines */}
             <div className="drinks-subcategory">
               <h4 className="subcategory-title">Red</h4>
@@ -232,21 +199,23 @@ export default function PremiumSelection() {
                 <div className="drink-item">Prosecco</div>
               </div>
             </div>
-          </div>
+          </details>
 
           {/* Soft Drinks */}
-          <div className="drinks-category scroll-reveal">
-            <div className="category-header">
-              <h3 className="category-title">🥤 Soft Drinks &amp; Mixers</h3>
+          <details className="drinks-category scroll-reveal">
+            <summary className="category-header">
+              <h3 className="category-title">
+                <span className="collapse-arrow">▶</span> 🥤 Soft Drinks &amp; Mixers
+              </h3>
               <p className="category-desc">Premium mixers &amp; alcohol-free options</p>
-            </div>
+            </summary>
             <div className="drinks-grid-category">
               <div className="drink-item">Kopparberg</div>
               <div className="drink-item">J2O</div>
               <div className="drink-item">Fanta</div>
               <div className="drink-item">Pink Ting</div>
             </div>
-          </div>
+          </details>
         </div>
       </section>
 

@@ -1796,6 +1796,15 @@ a {
     box-shadow: 0 10px 30px rgba(255, 184, 0, 0.1);
 }
 
+.drinks-category > summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.drinks-category > summary::-webkit-details-marker {
+    display: none;
+}
+
 .category-header {
     margin-bottom: 2rem;
     padding-bottom: 1.5rem;
@@ -1823,6 +1832,17 @@ a {
 
 .drinks-subcategory:last-child {
     margin-bottom: 0;
+}
+
+.collapse-arrow {
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+details[open] .collapse-arrow {
+    transform: rotate(90deg);
 }
 
 .subcategory-title {
