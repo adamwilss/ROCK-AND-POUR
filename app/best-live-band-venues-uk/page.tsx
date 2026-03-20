@@ -1,0 +1,4 @@
+'use client';
+export default function BestVenues() {
+  return <main className="section"><div className="container"><h1 className="page-h1">Best Live Band Venues UK - The Bowdon Rooms, Altrincham</h1><p>Great live band venues are rare. Ones that combine excellent sound, outstanding bands, AND reasonable pricing? Almost non-existent. The Bowdon Rooms is different.</p><h2>What Makes a Great Venue</h2><ul><li>Crystal-clear sound quality</li><li>Professional stage setup</li><li>Outstanding local bands</li><li>Intimate yet energetic space</li><li>Premium bar service</li><li>Transparent pricing</li></ul><h2>The Bowdon Rooms Difference</h2><p>Home of Rock & Pour. 300-person capacity. Excellent acoustics. Premium atmosphere. Live bands that command a crowd.</p><a href="https://www.skiddle.com/whats-on/Warrington/The-Bowdon-Rooms/Rock--Pour/42147525/" target="_blank" rel="noreferrer" className="btn btn-gold btn-large">EXPERIENCE GREAT VENUES</a></div></main>;
+}

@@ -1,0 +1,4 @@
+'use client';
+export default function GroupIdeas() {
+  return <main className="section"><div className="container"><h1 className="page-h1">Group Night Out Ideas - Planning Guide for Friends & Celebrations</h1><p>Group nights out are notoriously hard to organize. Different budgets, different preferences, logistics issues. Rock & Pour simplifies everything.</p><h2>Group Night Out Ideas</h2><ul><li>Birthday celebrations</li><li>Stag dos and hen parties</li><li>Friend reunions</li><li>Work team nights</li><li>Milestone celebrations</li></ul><h2>Why Groups Love Rock & Pour</h2><p>Fixed pricing, premium venue, live entertainment, everyone together. No splitting bills. No confusion. Just a great night with your crew.</p><a href="https://www.skiddle.com/whats-on/Warrington/The-Bowdon-Rooms/Rock--Pour/42147525/" target="_blank" rel="noreferrer" className="btn btn-gold btn-large">PLAN YOUR GROUP NIGHT</a></div></main>;
+}

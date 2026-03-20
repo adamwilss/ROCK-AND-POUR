@@ -1,0 +1,4 @@
+'use client';
+export default function VsNormalNight() {
+  return <main className="section"><div className="container"><h1 className="page-h1">Rock & Pour vs Normal Night Out - The Complete Comparison</h1><p>Normal nights: £60-£120+ spent, venues change every hour, group fragments, no entertainment. Rock & Pour: £55 fixed, one incredible venue, everyone together, live bands.</p><h2>Cost Comparison</h2><p>Normal night: £5-15 entry x 2-3 venues = £15-45, plus £40-80+ drinks = £60-120+</p><p>Rock & Pour: £55 all-in</p><h2>Experience Comparison</h2><p>Normal: fragmented, stressful, regretful. Rock & Pour: unified, premium, unforgettable.</p><a href="https://www.skiddle.com/whats-on/Warrington/The-Bowdon-Rooms/Rock--Pour/42147525/" target="_blank" rel="noreferrer" className="btn btn-gold btn-large">CHOOSE ROCK & POUR</a></div></main>;
+}

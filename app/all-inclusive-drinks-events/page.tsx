@@ -1,0 +1,4 @@
+'use client';
+export default function AllInclusiveDrinks() {
+  return <main className="section"><div className="container"><h1 className="page-h1">All-Inclusive Drinks Events UK - Premium Experience at Rock & Pour</h1><p>All-inclusive events are rare in UK nightlife. Rock & Pour changes this: one price covers everything - entry, unlimited premium drinks, live entertainment.</p><h2>The All-Inclusive Advantage</h2><p>No budgeting per drink. No surprise bar tabs. No decision fatigue. Just pure enjoyment. Your night is paid for when you walk through the door.</p><h2>Premium Drinks Included</h2><ul><li>Murphy's Irish Stout</li><li>Premium wines and spirits</li><li>Craft beer selections</li><li>All soft drinks</li></ul><a href="https://www.skiddle.com/whats-on/Warrington/The-Bowdon-Rooms/Rock--Pour/42147525/" target="_blank" rel="noreferrer" className="btn btn-gold btn-large">BOOK ALL-INCLUSIVE NIGHT</a></div></main>;
+}
