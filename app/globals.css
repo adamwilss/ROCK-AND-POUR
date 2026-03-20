@@ -404,7 +404,7 @@ a {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(5, 5, 5, 0.15) 0%, rgba(5, 5, 5, 0.0) 35%, rgba(5, 5, 5, 0.55) 82%, rgba(5, 5, 5, 1) 100%);
+    background: linear-gradient(to bottom, rgba(5, 5, 5, 0.05) 0%, rgba(5, 5, 5, 0.0) 35%, rgba(5, 5, 5, 0.25) 82%, rgba(5, 5, 5, 0.6) 100%);
     z-index: 1;
 }
 
@@ -494,7 +494,8 @@ a {
     height: auto;
     display: block;
     mix-blend-mode: multiply;
-    opacity: 0.95;
+    opacity: 1;
+    filter: brightness(1.15);
     animation: crowdSway 2.8s ease-in-out infinite;
     transform-origin: bottom center;
 }
