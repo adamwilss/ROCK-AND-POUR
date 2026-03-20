@@ -564,6 +564,18 @@ a {
     gap: 1.5rem;
 }
 
+.hero-h1 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 .hero-subtitle {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.7rem;
@@ -1498,6 +1510,35 @@ a {
     line-height: 1.85;
     margin-bottom: 1.5rem;
     font-family: var(--font-body);
+}
+
+.story-subheading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-gold);
+    margin: 2rem 0 1rem;
+    font-family: var(--font-heading);
+}
+
+.gold-link {
+    color: var(--color-gold);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-gold);
+    transition: all 0.3s ease;
+}
+
+.gold-link:hover {
+    color: var(--color-gold-hover);
+    border-bottom-color: var(--color-gold-hover);
+}
+
+.comparison-intro {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    margin: 1.5rem auto;
+    max-width: 700px;
+    text-align: center;
 }
 
 .story-quote {

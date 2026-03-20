@@ -92,7 +92,7 @@ export default function Home() {
         <div className="hero-haze" />
         <div id="hero-particles" className="hero-particles"></div>
         <div className="hero-content">
-          <h1 className="sr-only">Rock &amp; Pour — Your Entire Night Out. One Ticket. Live Band, Unlimited Beer, Wine &amp; Spirits at The Bowdon Rooms</h1>
+          <h1 className="hero-h1 fade-up">Rock &amp; Pour — All-Inclusive Live Music &amp; Premium Drinks Night in Manchester</h1>
           <h3 className="hero-subtitle fade-up">
             <span className="subtitle-line" />
             AT THE BOWDON ROOMS
@@ -141,10 +141,13 @@ export default function Home() {
               </h2>
               <div className="gold-rule-left" />
               <p className="section-desc">
-                Rock &amp; Pour is a high-energy live music night where your £55 ticket includes all your drinks. Enjoy outstanding bands playing indie rock, Britpop and 90s anthems in an immersive party atmosphere.
+                Rock &amp; Pour is a premium all-inclusive live music and drinks experience at The Bowdon Rooms in Manchester. Your £55 ticket covers everything: entry, unlimited premium beers (including Murphy's Irish Stout and Moretti), wines, and spirits. Enjoy outstanding live bands playing indie rock, Britpop, 90s rock anthems and classic sing-alongs in an immersive, high-energy party atmosphere. No hidden costs. No last calls. No awkward payment drama.
               </p>
               <p className="section-desc">
-                Sing, dance and drink with friends for an unforgettable night.
+                Unlike a normal night out where you're venue hopping, spending £60–£120+ on entry fees and drinks with zero certainty, Rock &amp; Pour gives you complete peace of mind. Everything's included in one fixed price. Sing, dance, and drink with friends for an unforgettable night from start to finish.
+              </p>
+              <p className="section-desc">
+                Explore our <a href="/premium-selection" className="gold-link">complete selection of premium drinks</a>, learn more about <a href="/house-rules" className="gold-link">house rules and what's included</a>, or <a href="#value" className="gold-link">see how Rock &amp; Pour compares to a normal night out</a>.
               </p>
               <div style={{ position: 'relative' }}>
                 <GlowingEffect spread={40} glow={true} disabled={false} proximity={64} inactiveZone={0.01} borderWidth={2} />
@@ -191,13 +194,18 @@ export default function Home() {
             <h2 className="section-title">The Night That <span className="gold-text">Changed Everything</span></h2>
             <div className="gold-rule-left" />
             <div className="story-body">
-              <p className="story-paragraph">One Saturday night in Manchester, Terry found himself bouncing between venues. An hour&apos;s queue here. A £14 cocktail there. A cover charge that went up at the door. By midnight he&apos;d spent £60 and was still looking for somewhere decent to settle.</p>
-              <p className="story-paragraph">It was the kind of night that should have been brilliant — mates, music, city centre — but it was being chipped away at from every direction. No single venue was giving him what he actually wanted: a proper atmosphere, a great live band, and drinks without the drama.</p>
+              <h3 className="story-subheading">A Typical Manchester Night Out Gone Wrong</h3>
+              <p className="story-paragraph">One Saturday night in Manchester, Terry found himself caught in the all-too-familiar trap of a disorganized night out. The evening started with promise — mates ready to go, energy high, city centre calling. But within the first few hours, reality set in. An hour-long queue outside the first venue. A £15 entry charge that wasn't mentioned online. A £14 cocktail that was more ice than drink. Another venue with a different cover charge that magically increased at the door. By midnight, he'd spent £60 and was increasingly frustrated, still searching for somewhere decent to actually settle and enjoy himself.</p>
+              <p className="story-paragraph">It was the kind of night that should have been brilliant — great mates, diverse venues, vibrant city centre energy — but it was being quietly destroyed from every direction. The money was disappearing without bringing any proportional joy. No single venue was delivering what he actually wanted: authentic atmosphere, proper live music, quality drinks without the financial anxiety, and a group that could actually stay together without someone getting lost or frustrated.</p>
+              <h3 className="story-subheading">The Frustration Becomes an Idea</h3>
               <blockquote className="story-quote">
-                <span className="gold-text">&quot;I wanted a night where you could just arrive, enjoy yourself, and never have to think about money again until you got home.&quot;</span>
+                <span className="gold-text">&quot;I wanted a night where you could just arrive, enjoy yourself, and never have to think about money again until you got home. Real music. Real drinks. Real friends. All in one place.&quot;</span>
                 <cite>— Terry, Founder</cite>
               </blockquote>
-              <p className="story-paragraph">Rock &amp; Pour was built on that frustration. One room. One band. One ticket that covers everything. You know exactly what you&apos;re spending before you arrive, so the only thing left to do is enjoy it.</p>
+              <p className="story-paragraph">That moment of clarity crystallized into something bigger. What if there was a better way? What if one night, in one room, with one ticket price, you could have everything covered? No hidden charges. No surprise bill at the end. No coordination headaches. Just pure experience.</p>
+              <h3 className="story-subheading">Rock &amp; Pour Was Born</h3>
+              <p className="story-paragraph">Rock &amp; Pour was built directly on that frustration and that insight. Simple formula: One fixed-price ticket (£55). One incredible live band. Unlimited premium drinks all night. One incredible venue. The entire experience designed so that the only decision you make is when to arrive and how to celebrate. Your group stays together. Your budget stays predictable. Your night stays brilliant.</p>
+              <p className="story-paragraph">It's not just another event. It's the antidote to expensive, chaotic, fragmented nights out. Every element — the band selection, the drinks menu, the atmosphere — is curated around one principle: <strong>give people an unforgettable experience without the financial stress or coordination nightmare</strong>.</p>
             </div>
           </div>
         </div>
@@ -209,6 +217,9 @@ export default function Home() {
           <div className="text-center scroll-reveal">
             <h2 className="section-title">Where Does Your <span className="gold-text">Money</span> Go?</h2>
             <p className="comparison-subtitle">Most nights end like this</p>
+            <div className="comparison-header-divider"></div>
+            <p className="comparison-intro">A typical night out in Manchester starts with good intentions — but ends with £60–£120+ spent without realizing it. Entry fees stack. Drinks cost more than expected. Time is wasted queuing. Your group gets split up. By the end of the night, you're confused about where all your money went and wondering if it was actually worth it.</p>
+            <p className="comparison-intro">Rock &amp; Pour eliminates every single one of these pain points. One venue. One band. One fixed price. Everything included. No surprises. No regrets.</p>
             <div className="comparison-header-divider"></div>
           </div>
           <div className="comparison-table-wrapper scroll-reveal">

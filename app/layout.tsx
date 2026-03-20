@@ -45,9 +45,10 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "MusicEvent",
-  "name": "Rock & Pour",
-  "description": "A night of live rock music with free premium drinks included throughout the evening at The Bowdon Rooms, Altrincham.",
+  "@type": ["MusicEvent", "LocalBusiness"],
+  "name": "Rock & Pour — Live Music & All-Inclusive Drinks Night",
+  "alternateName": "Rock and Pour Manchester",
+  "description": "Rock & Pour is a premium all-inclusive live music and drinks experience at The Bowdon Rooms in Manchester. Enjoy live rock bands, unlimited premium beers, wines, and spirits for one fixed price of £55.",
   "startDate": "2026-04-10T19:30:00",
   "eventStatus": "https://schema.org/EventScheduled",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
