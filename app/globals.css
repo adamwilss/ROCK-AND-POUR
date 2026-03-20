@@ -3372,3 +3372,87 @@ main.section tbody tr:last-child td {
         padding-left: 0.8rem;
     }
 }
+
+/* ── Footer Dropdown ────────────────────────────── */
+.footer-dropdown {
+    width: 100%;
+}
+
+.footer-dropdown summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+.footer-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.footer-dropdown summary h4 {
+    color: var(--color-gold);
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-dropdown summary:hover h4 {
+    color: var(--color-gold-hover);
+}
+
+.footer-dropdown[open] summary h4 {
+    margin-bottom: 1.5rem;
+}
+
+.footer-dropdown-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 184, 0, 0.03);
+    border: 1px solid rgba(255, 184, 0, 0.1);
+    border-radius: 12px;
+    margin-top: 0.5rem;
+}
+
+.footer-dropdown-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-dropdown-heading {
+    color: var(--color-gold);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.3rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid rgba(255, 184, 0, 0.15);
+}
+
+.footer-dropdown-col a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+    padding: 0.15rem 0;
+}
+
+.footer-dropdown-col a:hover {
+    color: var(--color-gold);
+}
+
+@media (max-width: 768px) {
+    .footer-dropdown-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-dropdown-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+}

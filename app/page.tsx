@@ -366,24 +366,74 @@ export default function Home() {
               <p>Live music. All-inclusive drinks. A room full of people there for a proper night out.</p>
             </div>
             <div className="footer-links">
-              <h4>Explore</h4>
-              <a href="/the-experience">The Experience</a>
-              <a href="/events">Events</a>
-              <a href="/premium-selection">Drinks</a>
-              <a href="/pricing">Pricing</a>
-              <a href="/about">About</a>
-              <a href="/faq">FAQ</a>
-              <a href="/house-rules">House Rules</a>
-            </div>
-            <div className="footer-links">
-              <h4>Discover</h4>
-              <a href="/bands">Bands</a>
-              <a href="/drinks-guide">Drinks Guide</a>
-              <a href="/bowdon-rooms">The Venue</a>
-              <a href="/first-time-guide">First Time?</a>
-              <a href="/group-events">Group Events</a>
-              <a href="/corporate-events">Corporate</a>
-              <a href="/altrincham-nights-out">Altrincham</a>
+              <details className="footer-dropdown">
+                <summary><h4>Explore Rock &amp; Pour ▾</h4></summary>
+                <div className="footer-dropdown-grid">
+                  <div className="footer-dropdown-col">
+                    <span className="footer-dropdown-heading">The Basics</span>
+                    <a href="/the-experience">The Experience</a>
+                    <a href="/events">Events</a>
+                    <a href="/about">About</a>
+                    <a href="/pricing">Pricing</a>
+                    <a href="/faq">FAQ</a>
+                    <a href="/first-time-guide">First Time?</a>
+                    <a href="/house-rules">House Rules</a>
+                  </div>
+                  <div className="footer-dropdown-col">
+                    <span className="footer-dropdown-heading">Music &amp; Drinks</span>
+                    <a href="/premium-selection">Premium Selection</a>
+                    <a href="/drinks-guide">Drinks Guide</a>
+                    <a href="/bands">Bands</a>
+                    <a href="/bowdon-rooms">The Venue</a>
+                    <a href="/live-music-guide">Live Music Guide</a>
+                    <a href="/why-live-music-matters">Why Live Music</a>
+                    <a href="/indie-rock-night">Indie Rock Night</a>
+                  </div>
+                  <div className="footer-dropdown-col">
+                    <span className="footer-dropdown-heading">Plan Your Night</span>
+                    <a href="/group-events">Group Events</a>
+                    <a href="/corporate-events">Corporate</a>
+                    <a href="/party-planning">Party Planning</a>
+                    <a href="/date-night">Date Night</a>
+                    <a href="/stag-do-ideas">Stag Dos</a>
+                    <a href="/hen-party-ideas">Hen Parties</a>
+                    <a href="/birthday-celebration-ideas">Birthdays</a>
+                    <a href="/team-building-events">Team Building</a>
+                  </div>
+                  <div className="footer-dropdown-col">
+                    <span className="footer-dropdown-heading">Who It&rsquo;s For</span>
+                    <a href="/girls-night-out">Girls Night</a>
+                    <a href="/lads-night-out">Lads Night</a>
+                    <a href="/office-night-out">Office Night</a>
+                    <a href="/reunion-night-out">Reunions</a>
+                    <a href="/rock-music-fans">Rock Fans</a>
+                    <a href="/britpop-lovers">Britpop Lovers</a>
+                    <a href="/90s-nostalgia">90s Nostalgia</a>
+                    <a href="/indie-music-fans">Indie Fans</a>
+                  </div>
+                  <div className="footer-dropdown-col">
+                    <span className="footer-dropdown-heading">Local</span>
+                    <a href="/altrincham-nights-out">Altrincham</a>
+                    <a href="/manchester-nights-out">Manchester</a>
+                    <a href="/manchester-live-music-events">Manchester Music</a>
+                    <a href="/cheshire-events">Cheshire</a>
+                    <a href="/warrington-nights-out">Warrington</a>
+                    <a href="/best-manchester-venues">Best Venues</a>
+                    <a href="/date-night-manchester">Date Night MCR</a>
+                  </div>
+                  <div className="footer-dropdown-col">
+                    <span className="footer-dropdown-heading">Compare &amp; Tips</span>
+                    <a href="/vs-nightclub">vs Nightclubs</a>
+                    <a href="/vs-pub-crawl">vs Pub Crawls</a>
+                    <a href="/vs-normal-night-out">vs Normal Night</a>
+                    <a href="/alternative-to-nightclubs">Club Alternative</a>
+                    <a href="/night-out-tips">Night Out Tips</a>
+                    <a href="/what-to-wear-night-out">What to Wear</a>
+                    <a href="/how-to-budget-night-out">Budgeting</a>
+                    <a href="/all-inclusive-drinks-events">All-Inclusive</a>
+                  </div>
+                </div>
+              </details>
             </div>
             <div className="footer-contact">
               <h4>Contact &amp; Venue</h4>
