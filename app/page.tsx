@@ -366,11 +366,24 @@ export default function Home() {
               <p>Live music. All-inclusive drinks. A room full of people there for a proper night out.</p>
             </div>
             <div className="footer-links">
-              <h4>Quick Links</h4>
-              <a href="#experience">The Experience</a>
-              <a href="/premium-selection">Premium Selection</a>
+              <h4>Explore</h4>
+              <a href="/the-experience">The Experience</a>
+              <a href="/events">Events</a>
+              <a href="/premium-selection">Drinks</a>
+              <a href="/pricing">Pricing</a>
+              <a href="/about">About</a>
+              <a href="/faq">FAQ</a>
               <a href="/house-rules">House Rules</a>
-              <a href="https://www.skiddle.com/whats-on/Warrington/The-Bowdon-Rooms/Rock--Pour/42147525/" target="_blank" rel="noreferrer">Tickets</a>
+            </div>
+            <div className="footer-links">
+              <h4>Discover</h4>
+              <a href="/bands">Bands</a>
+              <a href="/drinks-guide">Drinks Guide</a>
+              <a href="/bowdon-rooms">The Venue</a>
+              <a href="/first-time-guide">First Time?</a>
+              <a href="/group-events">Group Events</a>
+              <a href="/corporate-events">Corporate</a>
+              <a href="/altrincham-nights-out">Altrincham</a>
             </div>
             <div className="footer-contact">
               <h4>Contact &amp; Venue</h4>
