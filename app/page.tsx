@@ -149,7 +149,7 @@ export default function Home() {
               <p className="section-desc">
                 Explore our <a href="/premium-selection" className="gold-link">complete selection of premium drinks</a>, learn more about <a href="/house-rules" className="gold-link">house rules and what's included</a>, or <a href="#value" className="gold-link">see how Rock &amp; Pour compares to a normal night out</a>.
               </p>
-              <div style={{ position: 'relative' }}>
+              <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '4px' }}>
                 <GlowingEffect spread={40} glow={true} disabled={false} proximity={64} inactiveZone={0.01} borderWidth={2} />
                 <div className="stats-strip">
                   <div className="stat-item">
