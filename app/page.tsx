@@ -94,7 +94,7 @@ export default function Home() {
           </h3>
           <div className="hero-title-img fade-up delay-1">
             <div className="title-img-wrap">
-              <img src="/title-logo-transparent.webp" alt="ROCK & POUR" className="title-logo-img" />
+              <Image src="/title-logo-transparent.webp" alt="ROCK & POUR" className="title-logo-img" width={600} height={200} priority />
               <div className="title-sheen" />
             </div>
           </div>
@@ -119,7 +119,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-crowd">
-          <img src="/crowd.webp" alt="" aria-hidden="true" />
+          <Image src="/crowd.webp" alt="" aria-hidden={true} width={1920} height={400} priority />
         </div>
       </header>
 
@@ -140,7 +140,7 @@ export default function Home() {
                 <tr>
                   <th></th>
                   <th className="col-normal">A Normal Night Out</th>
-                  <th className="col-rp"><img src="/title-logo-transparent.webp" alt="Rock & Pour" className="table-logo" /></th>
+                  <th className="col-rp"><Image src="/title-logo-transparent.webp" alt="Rock & Pour" className="table-logo" width={120} height={40} loading="lazy" /></th>
                 </tr>
               </thead>
               <tbody>
@@ -334,7 +334,7 @@ export default function Home() {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
-              <img src="/title-logo-transparent.webp" alt="ROCK & POUR" className="footer-logo-img" loading="lazy" />
+              <Image src="/title-logo-transparent.webp" alt="ROCK & POUR" className="footer-logo-img" width={200} height={67} loading="lazy" />
               <p>Live music. All-inclusive drinks. A room full of people there for a proper night out.</p>
             </div>
             <div className="footer-links">
