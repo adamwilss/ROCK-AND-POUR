@@ -22,15 +22,14 @@ void main(){
   uv*=vec2(2,1);
 
   float n=fbm(uv*.28-vec2(T*.01,0));
-  float smoke=fbm(uv+vec2(0,T*.015)+n*2.);
+  float s=fbm(uv+vec2(0,T*.015)+n*2.);
 
-  // Smooth wispy alpha — no hard threshold so no jagged edges
-  float alpha=smoothstep(0.1,0.85,smoke)*0.9;
+  // Wispy threshold — only denser smoke patches are visible, keeps it light
+  float alpha=smoothstep(0.38,0.78,s)*0.82;
   alpha*=min(time*.12,1.);
 
-  // Fire colour: deep red-orange in thin wisps, bright amber in dense areas
-  vec3 ember=vec3(0.65,0.1,0.0);
-  vec3 col=mix(ember,u_color,smoothstep(0.2,0.8,smoke));
+  // Pure golden — dim in wisps, bright in dense patches, never muddy
+  vec3 col=u_color*(0.5+0.5*s);
 
   O=vec4(col,alpha);
 }`;
