@@ -367,7 +367,7 @@ a {
     text-align: center;
     overflow: hidden;
     background-color: #060402;
-    padding-top: 80px;   /* clear the fixed navbar */
+    padding-top: 120px;  /* clear the fixed navbar with breathing room */
     padding-bottom: 20vh;
 }
 
@@ -377,8 +377,8 @@ a {
     inset: 0;
     z-index: 1;
     pointer-events: none;
-    mix-blend-mode: screen;
-    opacity: 0.22;
+    /* mix-blend-mode: screen removed — forces full-page compositing every frame */
+    opacity: 0.35;
 }
 
 .smoke-bg-layer {
@@ -423,6 +423,7 @@ a {
     top: -2%;
     height: 115vh;
     transform-origin: top center;
+    will-change: transform, opacity;
 }
 
 .spotlight-1 {
@@ -496,13 +497,13 @@ a {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 110%;
-    height: 80%;
-    background: radial-gradient(ellipse at 50% 100%,
+    width: 160%;
+    height: 90%;
+    background: radial-gradient(ellipse 60% 55% at 50% 100%,
         rgba(255, 170, 40, 0.65) 0%,
-        rgba(255, 110, 0, 0.32) 40%,
-        rgba(255, 80, 0, 0.10) 65%,
-        transparent 80%);
+        rgba(255, 110, 0, 0.30) 35%,
+        rgba(255, 80, 0, 0.08) 60%,
+        transparent 75%);
     z-index: 0;
     pointer-events: none;
 }
@@ -518,6 +519,7 @@ a {
     filter: brightness(1.15);
     animation: crowdSway 2.8s ease-in-out infinite;
     transform-origin: bottom center;
+    will-change: transform;
 }
 
 @keyframes crowdSway {
@@ -549,6 +551,7 @@ a {
     opacity: 0;
     pointer-events: none;
     animation: floatParticle linear infinite;
+    will-change: transform, opacity;
 }
 
 @keyframes floatParticle {
@@ -731,17 +734,8 @@ a {
 }
 
 @keyframes titleGlow {
-    from {
-        text-shadow:
-            0 0 40px rgba(255, 184, 0, 0.15),
-            0 2px 4px rgba(0, 0, 0, 0.8);
-    }
-    to {
-        text-shadow:
-            0 0 60px rgba(255, 184, 0, 0.45),
-            0 0 120px rgba(255, 184, 0, 0.15),
-            0 2px 4px rgba(0, 0, 0, 0.8);
-    }
+    from { opacity: 0.85; }
+    to   { opacity: 1.0; }
 }
 
 .hero-highlights {
@@ -770,20 +764,9 @@ a {
 }
 
 @keyframes pricePulse {
-    0% {
-        transform: scale(1);
-        text-shadow: 0 0 10px rgba(255, 184, 0, 0.4);
-    }
-
-    50% {
-        transform: scale(1.08);
-        text-shadow: 0 0 25px rgba(255, 184, 0, 0.9);
-    }
-
-    100% {
-        transform: scale(1);
-        text-shadow: 0 0 10px rgba(255, 184, 0, 0.4);
-    }
+    0%   { transform: scale(1);    opacity: 0.85; }
+    50%  { transform: scale(1.08); opacity: 1.0; }
+    100% { transform: scale(1);    opacity: 0.85; }
 }
 
 .hero-date {
@@ -803,44 +786,27 @@ a {
 }
 
 @keyframes btnPulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(255, 184, 0, 0.75);
-    }
-
-    70% {
-        box-shadow: 0 0 0 15px rgba(255, 184, 0, 0);
-    }
-
-    100% {
-        box-shadow: 0 0 0 0 rgba(255, 184, 0, 0);
-    }
+    0%   { transform: scale(1);    opacity: 1; }
+    50%  { transform: scale(1.03); opacity: 0.92; }
+    100% { transform: scale(1);    opacity: 1; }
 }
 
 .hero-actions .btn-gold::before {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
     width: 30%;
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-    transform: skewX(-20deg);
     animation: shimmer 3s infinite ease-in-out;
     z-index: -1;
 }
 
 @keyframes shimmer {
-    0% {
-        left: -100%;
-    }
-
-    50% {
-        left: 200%;
-    }
-
-    100% {
-        left: 200%;
-    }
+    0%   { transform: skewX(-20deg) translateX(-200%); }
+    50%  { transform: skewX(-20deg) translateX(500%); }
+    100% { transform: skewX(-20deg) translateX(500%); }
 }
 
 /* Countdown */
@@ -1281,6 +1247,8 @@ a {
 /* Poster Section */
 .poster-section {
     background-color: var(--color-bg);
+    content-visibility: auto;
+    contain-intrinsic-size: 0 600px;
 }
 
 .poster-pair {
@@ -1321,6 +1289,8 @@ a {
     background-color: #020202;
     padding: 5rem 0 2rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
+    content-visibility: auto;
+    contain-intrinsic-size: 0 400px;
 }
 
 .footer-grid {
@@ -3799,12 +3769,8 @@ main.section .scroll-reveal.text-center p {
 
 /* CTA Button Glow Pulse */
 @keyframes ctaPulse {
-    0%, 100% {
-        box-shadow: 0 0 15px rgba(255, 184, 0, 0.35);
-    }
-    50% {
-        box-shadow: 0 0 30px rgba(255, 184, 0, 0.55), 0 0 60px rgba(255, 184, 0, 0.15);
-    }
+    0%, 100% { opacity: 0.88; }
+    50%       { opacity: 1.0; }
 }
 
 main.section .scroll-reveal.text-center .btn-gold {
