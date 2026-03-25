@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 
 const fragmentShaderSource = `#version 300 es
-precision highp float;
+precision mediump float;
 out vec4 O;
 uniform float time;
 uniform vec2 resolution;
@@ -18,22 +18,17 @@ float fbm(vec2 p){float t=.0,a=1.;for(int i=0;i<3;i++){t+=a*noise(p);p*=mat2(1,-
 
 void main(){
   vec2 uv=(FC-.5*R)/R.y;
-  vec3 col=vec3(1);
   uv.x+=.25;
   uv*=vec2(2,1);
 
   float n=fbm(uv*.28-vec2(T*.01,0));
-  n=noise(uv*3.+n*2.);
+  float smoke=fbm(uv+vec2(0,T*.015)+n*2.);
 
-  col.r-=fbm(uv+vec2(0,T*.015)+n);
-  col.g-=fbm(uv*1.003+vec2(0,T*.015)+n+.003);
-  col.b-=fbm(uv*1.006+vec2(0,T*.015)+n+.006);
+  // Threshold + soften edges — always warm amber, never coloured artifacts
+  float alpha=clamp((smoke-0.28)*2.2,0.,1.);
+  alpha*=min(time*.12,1.);
 
-  col=mix(col, u_color, dot(col,vec3(.21,.71,.07)));
-
-  col=mix(vec3(.04),col,min(time*.12,1.));
-  col=clamp(col,.04,1.);
-  O=vec4(col,1);
+  O=vec4(u_color,alpha*0.75);
 }`;
 
 class Renderer {
@@ -53,7 +48,11 @@ void main(){gl_Position=position;}`;
 
   constructor(canvas: HTMLCanvasElement, fragmentSource: string) {
     this.canvas = canvas;
-    this.gl = canvas.getContext('webgl2') as WebGL2RenderingContext;
+    // alpha:true so transparent areas show through — no mix-blend-mode needed
+    this.gl = canvas.getContext('webgl2', { alpha: true, premultipliedAlpha: false }) as WebGL2RenderingContext;
+    const gl = this.gl;
+    gl.enable(gl.BLEND);
+    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
     this.setup(fragmentSource);
     this.init();
   }
@@ -65,7 +64,6 @@ void main(){gl_Position=position;}`;
   updateScale() {
     const width = this.canvas.clientWidth || window.innerWidth;
     const height = this.canvas.clientHeight || window.innerHeight;
-    // Render at 50% resolution — smoke is blurry/atmospheric, visually identical
     this.canvas.width = Math.round(width * 0.5);
     this.canvas.height = Math.round(height * 0.5);
     this.gl.viewport(0, 0, this.canvas.width, this.canvas.height);
@@ -123,7 +121,7 @@ void main(){gl_Position=position;}`;
   render(now = 0) {
     const { gl, program, buffer, canvas } = this;
     if (!program || !gl.isProgram(program)) return;
-    gl.clearColor(0, 0, 0, 1);
+    gl.clearColor(0, 0, 0, 0); // transparent clear — no black bleed
     gl.clear(gl.COLOR_BUFFER_BIT);
     gl.useProgram(program);
     gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
@@ -168,7 +166,7 @@ export const SmokeBackground: React.FC<SmokeBackgroundProps> = ({
     let animationFrameId: number;
     let isVisible = true;
     let lastFrameTime = 0;
-    const FRAME_MIN_MS = 1000 / 20; // cap at 20fps
+    const FRAME_MIN_MS = 1000 / 20;
 
     const loop = (now: number) => {
       animationFrameId = requestAnimationFrame(loop);
@@ -178,7 +176,6 @@ export const SmokeBackground: React.FC<SmokeBackgroundProps> = ({
     };
     animationFrameId = requestAnimationFrame(loop);
 
-    // Pause rendering when canvas is off-screen
     const observer = new IntersectionObserver(
       ([entry]) => { isVisible = entry.isIntersecting; },
       { threshold: 0 }

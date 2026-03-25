@@ -377,8 +377,7 @@ a {
     inset: 0;
     z-index: 1;
     pointer-events: none;
-    /* mix-blend-mode: screen removed — forces full-page compositing every frame */
-    opacity: 0.35;
+    opacity: 0.6; /* shader controls per-pixel alpha — no mix-blend-mode needed */
 }
 
 .smoke-bg-layer {
