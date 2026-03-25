@@ -10,8 +10,8 @@
     --color-gold-hover: #FFC933;
     --color-gold-dark: #CC9200;
 
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Montserrat', sans-serif;
+    --font-heading: var(--font-playfair), 'Playfair Display', serif;
+    --font-body: var(--font-montserrat), 'Montserrat', sans-serif;
 
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -635,7 +635,7 @@ a {
 }
 
 .hero-title {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: var(--font-bebas), 'Bebas Neue', sans-serif;
     font-size: 11rem;
     font-weight: 400;
     margin-bottom: 2.5rem;
@@ -648,7 +648,7 @@ a {
 
 .hero-amp {
     color: var(--color-gold);
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: var(--font-bebas), 'Bebas Neue', sans-serif;
     font-style: normal;
     font-size: 1em;
     vertical-align: baseline;
@@ -2012,7 +2012,7 @@ a {
 }
 
 .on-tap-primary h3 {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: var(--font-bebas), 'Bebas Neue', sans-serif;
     font-size: 2.2rem;
     color: var(--color-gold);
     margin-bottom: 0.5rem;
@@ -2143,7 +2143,7 @@ a {
 }
 
 .category-title {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: var(--font-bebas), 'Bebas Neue', sans-serif;
     font-size: 1.6rem;
     letter-spacing: 2px;
     color: var(--color-gold);
@@ -2385,7 +2385,7 @@ details[open] .collapse-arrow {
 }
 
 .house-rules-title {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: var(--font-bebas), 'Bebas Neue', sans-serif;
     font-size: 5rem;
     letter-spacing: 4px;
     margin-bottom: 1rem;
@@ -2421,7 +2421,7 @@ details[open] .collapse-arrow {
 }
 
 .rule-number {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: var(--font-bebas), 'Bebas Neue', sans-serif;
     font-size: 3rem;
     color: rgba(255, 184, 0, 0.18);
     line-height: 1;
