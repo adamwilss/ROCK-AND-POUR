@@ -123,64 +123,6 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Experience Section */}
-      <section className="experience section" id="experience">
-        <div className="container">
-          <div className="experience-grid">
-            <div className="experience-text scroll-reveal">
-              <p className="section-overline">One Ticket. Everything Included.</p>
-              <h2 className="section-title">
-                An Evening of
-                <span className="typewriter-line"><span className="gold-text"><Typewriter text={["Anthems","Energy","Revelry","Nostalgia","Indie","Dance"]} speed={160} deleteSpeed={90} waitTime={4000} /></span></span>
-              </h2>
-              <div className="gold-rule-left" />
-              <p className="section-desc">
-                Rock &amp; Pour is a premium all-inclusive live music and drinks experience at The Bowdon Rooms in Manchester. Your £55 ticket covers everything: entry, unlimited premium beers (including Murphy's Irish Stout and Moretti), wines, and spirits. Enjoy outstanding live bands playing indie rock, Britpop, 90s rock anthems and classic sing-alongs in an immersive, high-energy party atmosphere. No hidden costs. No last calls. No awkward payment drama.
-              </p>
-              <p className="section-desc">
-                Unlike a normal night out where you're venue hopping, spending £60–£120+ on entry fees and drinks with zero certainty, Rock &amp; Pour gives you complete peace of mind. Everything's included in one fixed price. Sing, dance, and drink with friends for an unforgettable night from start to finish.
-              </p>
-              <p className="section-desc">
-                Explore our <a href="/premium-selection" className="gold-link">complete selection of premium drinks</a>, learn more about <a href="/house-rules" className="gold-link">house rules and what's included</a>, or <a href="#value" className="gold-link">see how Rock &amp; Pour compares to a normal night out</a>.
-              </p>
-              <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '4px' }}>
-                <GlowingEffect spread={40} glow={true} disabled={false} proximity={64} inactiveZone={0.01} borderWidth={2} />
-                <div className="stats-strip">
-                  <div className="stat-item">
-                    <div className="stat-value">300</div>
-                    <div className="stat-label">Capacity</div>
-                  </div>
-                  <div className="stat-item">
-                    <div className="stat-value">£55</div>
-                    <div className="stat-label">All Inclusive</div>
-                  </div>
-                  <div className="stat-item">
-                    <div className="stat-value">Live</div>
-                    <div className="stat-label">Music All Night</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="experience-image scroll-reveal delay-2">
-              <div className="image-wrapper" id="drinks-image-wrapper" style={{ position: 'relative' }}>
-                <Image
-                  src="/drinks-img.webp"
-                  alt="Premium drinks at Rock & Pour"
-                  fill
-                  priority
-                  style={{ objectFit: 'cover' }}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="glass-card overlay-card">
-                  <div className="glass-card-rule" />
-                  <h4>&quot;Your round&apos;s on us. All night.&quot;</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Comparison Section */}
       <section className="comparison section dark-bg" id="value">
         <div className="container">
@@ -288,6 +230,64 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* Experience Section */}
+      <section className="experience section" id="experience">
+        <div className="container">
+          <div className="experience-grid">
+            <div className="experience-text scroll-reveal">
+              <p className="section-overline">One Ticket. Everything Included.</p>
+              <h2 className="section-title">
+                An Evening of
+                <span className="typewriter-line"><span className="gold-text"><Typewriter text={["Anthems","Energy","Revelry","Nostalgia","Indie","Dance"]} speed={160} deleteSpeed={90} waitTime={4000} /></span></span>
+              </h2>
+              <div className="gold-rule-left" />
+              <p className="section-desc">
+                Rock &amp; Pour is a premium all-inclusive live music and drinks experience at The Bowdon Rooms in Manchester. Your £55 ticket covers everything: entry, unlimited premium beers (including Murphy's Irish Stout and Moretti), wines, and spirits. Enjoy outstanding live bands playing indie rock, Britpop, 90s rock anthems and classic sing-alongs in an immersive, high-energy party atmosphere. No hidden costs. No last calls. No awkward payment drama.
+              </p>
+              <p className="section-desc">
+                Unlike a normal night out where you're venue hopping, spending £60–£120+ on entry fees and drinks with zero certainty, Rock &amp; Pour gives you complete peace of mind. Everything's included in one fixed price. Sing, dance, and drink with friends for an unforgettable night from start to finish.
+              </p>
+              <p className="section-desc">
+                Explore our <a href="/premium-selection" className="gold-link">complete selection of premium drinks</a>, learn more about <a href="/house-rules" className="gold-link">house rules and what's included</a>, or <a href="#value" className="gold-link">see how Rock &amp; Pour compares to a normal night out</a>.
+              </p>
+              <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '4px' }}>
+                <GlowingEffect spread={40} glow={true} disabled={false} proximity={64} inactiveZone={0.01} borderWidth={2} />
+                <div className="stats-strip">
+                  <div className="stat-item">
+                    <div className="stat-value">300</div>
+                    <div className="stat-label">Capacity</div>
+                  </div>
+                  <div className="stat-item">
+                    <div className="stat-value">£55</div>
+                    <div className="stat-label">All Inclusive</div>
+                  </div>
+                  <div className="stat-item">
+                    <div className="stat-value">Live</div>
+                    <div className="stat-label">Music All Night</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="experience-image scroll-reveal delay-2">
+              <div className="image-wrapper" id="drinks-image-wrapper" style={{ position: 'relative' }}>
+                <Image
+                  src="/drinks-img.webp"
+                  alt="Premium drinks at Rock & Pour"
+                  fill
+                  priority
+                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="glass-card overlay-card">
+                  <div className="glass-card-rule" />
+                  <h4>&quot;Your round&apos;s on us. All night.&quot;</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Poster Section */}
       <section className="poster-section section" id="events">
