@@ -367,7 +367,6 @@ a {
     text-align: center;
     overflow: hidden;
     background-color: #060402;
-    padding-top: 120px;  /* clear the fixed navbar with breathing room */
     padding-bottom: 20vh;
 }
 
@@ -580,7 +579,9 @@ a {
     width: 100%;
     max-width: 1200px;
     padding: 0 2rem;
-    margin-top: 2rem;
+    /* Top padding is the source of truth — never rely on hero centering alone */
+    padding-top: 160px !important;
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2489,7 +2490,8 @@ details[open] .collapse-arrow {
     }
 
     .hero-content {
-        padding: 0 1.2rem;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
     }
 
     .countdown-container {
@@ -2814,8 +2816,7 @@ details[open] .collapse-arrow {
 
     /* Push content clear of the fixed navbar */
     .hero-content {
-        margin-top: 0;
-        padding-top: 56px;
+        padding-top: 100px !important;
         padding-bottom: 8px;
     }
 
