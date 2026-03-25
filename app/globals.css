@@ -374,10 +374,11 @@ a {
 /* Fixed atmospheric smoke — sits behind sections, hero rises above it */
 .site-smoke {
     position: fixed;
-    inset: 0;
+    inset: -30px; /* overscan so blur doesn't clip at edges */
     z-index: 1;
     pointer-events: none;
-    opacity: 0.6; /* shader controls per-pixel alpha — no mix-blend-mode needed */
+    opacity: 0.6;
+    filter: blur(18px); /* smooths low-res canvas pixels into soft atmospheric haze */
 }
 
 .smoke-bg-layer {

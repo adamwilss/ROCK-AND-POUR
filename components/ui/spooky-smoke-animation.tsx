@@ -24,11 +24,11 @@ void main(){
   float n=fbm(uv*.28-vec2(T*.01,0));
   float s=fbm(uv+vec2(0,T*.015)+n*2.);
 
-  // Wispy threshold — only denser smoke patches are visible, keeps it light
-  float alpha=smoothstep(0.38,0.78,s)*0.82;
+  // Soft continuous smoke — CSS blur handles the wispy edges
+  float alpha=smoothstep(0.2,0.75,s)*0.75;
   alpha*=min(time*.12,1.);
 
-  // Pure golden — dim in wisps, bright in dense patches, never muddy
+  // Pure golden — dim in wisps, bright in dense patches
   vec3 col=u_color*(0.5+0.5*s);
 
   O=vec4(col,alpha);
