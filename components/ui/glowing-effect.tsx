@@ -98,6 +98,8 @@ const GlowingEffect = memo(
 
     useEffect(() => {
       if (disabled) return;
+      // Skip mouse tracking on touch devices — no hover, no benefit
+      if (window.matchMedia("(pointer: coarse)").matches) return;
 
       const handleScroll = () => handleMove();
       const handlePointerMove = (e: PointerEvent) => handleMove(e);
