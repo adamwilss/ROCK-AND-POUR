@@ -87,36 +87,39 @@ export default function Home() {
         <div id="hero-particles" className="hero-particles"></div>
         <div className="hero-content">
           <h1 className="hero-h1 fade-up">Rock &amp; Pour — All-Inclusive Live Music &amp; Premium Drinks Night in Manchester</h1>
-          <h3 className="hero-subtitle fade-up">
-            <span className="subtitle-line" />
-            AT THE BOWDON ROOMS
-            <span className="subtitle-line" />
+
+          {/* Benefit-Led Headline */}
+          <h2 className="hero-headline fade-up">
+            Most nights end at <span className="cost-highlight">£100+</span>
+            <br />
+            Rock &amp; Pour is <span className="gold-price">£55</span>
+            <br />
+            Everything included.
+          </h2>
+
+          <h3 className="hero-subtitle fade-up delay-1">
+            One band. Unlimited drinks. One venue. One price.
           </h3>
-          <div className="hero-title-img fade-up delay-1">
+
+          <div className="hero-title-img fade-up delay-2">
             <div className="title-img-wrap">
               <Image src="/title-logo-transparent.webp" alt="ROCK & POUR" className="title-logo-img" width={600} height={200} priority />
               <div className="title-sheen" />
             </div>
           </div>
 
-          <div className="hero-date fade-up delay-2">
+          <div className="hero-date fade-up delay-2b">
             <span>{targetEvent.month.toUpperCase()} {targetEvent.day}TH • {targetEvent.year}</span> • <span>{targetEvent.time}</span>
           </div>
 
-          <div className="hero-tagline fade-up delay-2b">
-            Live Band &bull; Unlimited Beer, Wine &amp; Spirits &bull; All Inclusive
+          <div className="hero-actions fade-up delay-3">
+            <a href="https://www.skiddle.com/whats-on/Warrington/The-Bowdon-Rooms/Rock--Pour/42147525/" target="_blank" rel="noreferrer" className="btn btn-gold btn-large btn-hero-primary">GET YOUR TICKETS NOW — £55</a>
+            <p className="hero-urgency">Capacity filling fast</p>
           </div>
 
-          <div className="countdown-container fade-up delay-3">
-            <GlowingEffect spread={60} glow={true} disabled={false} proximity={80} inactiveZone={0.01} borderWidth={2} />
-            <p className="countdown-label">TICKETS SELLING FAST</p>
-            <Countdown targetDate={targetEvent.date} />
-          </div>
-
-          <div className="hero-actions fade-up delay-4">
-            <a href="https://www.skiddle.com/whats-on/Warrington/The-Bowdon-Rooms/Rock--Pour/42147525/" target="_blank" rel="noreferrer" className="btn btn-gold btn-large">GET YOUR TICKETS — £55</a>
-            <p className="box-office-note">Or call the box office and save money — <a href="tel:01619268992" className="phone-link">0161 926 8992</a></p>
-          </div>
+          <p className="box-office-note fade-up delay-4">
+            Or call the box office and save money — <a href="tel:01619268992" className="phone-link">0161 926 8992</a>
+          </p>
         </div>
         <div className="hero-crowd">
           <Image src="/crowd.webp" alt="" aria-hidden={true} width={1920} height={400} priority />
