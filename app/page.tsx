@@ -88,8 +88,13 @@ export default function Home() {
         <div className="hero-content">
           <h1 className="hero-h1 fade-up">Rock &amp; Pour — All-Inclusive Live Music &amp; Premium Drinks Night in Manchester</h1>
 
-          {/* Brand at Top */}
-          <div className="hero-brand fade-up">ROCK &amp; POUR</div>
+          {/* Logo at Top */}
+          <div className="hero-title-img fade-up">
+            <div className="title-img-wrap">
+              <Image src="/title-logo-transparent.webp" alt="ROCK & POUR" className="title-logo-img" width={600} height={200} priority />
+              <div className="title-sheen" />
+            </div>
+          </div>
 
           {/* Benefit-Led Headline */}
           <h2 className="hero-headline fade-up delay-1">
@@ -104,13 +109,6 @@ export default function Home() {
           <h3 className="hero-subname-featured fade-up delay-2">
             Bowdon's Bottomless Bar &amp; Band Night
           </h3>
-
-          <div className="hero-title-img fade-up delay-2">
-            <div className="title-img-wrap">
-              <Image src="/title-logo-transparent.webp" alt="ROCK & POUR" className="title-logo-img" width={600} height={200} priority />
-              <div className="title-sheen" />
-            </div>
-          </div>
 
           <div className="hero-date fade-up delay-2b">
             <span>{targetEvent.month.toUpperCase()} {targetEvent.day}TH • {targetEvent.year}</span> • <span>{targetEvent.time}</span>
