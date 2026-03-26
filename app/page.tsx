@@ -92,11 +92,15 @@ export default function Home() {
           <h2 className="hero-headline fade-up">
             MOST NIGHTS END AT <span className="cost-highlight">£100+</span>
             <br />
-            BOWDON'S BOTTOMLESS BAR &amp; BAND NIGHT IS <span className="gold-price">£55</span>
+            ROCK &amp; POUR IS <span className="gold-price">£55</span>
+            <br />
+            EVERYTHING INCLUDED
+            <br />
+            <span className="hero-subname">Bowdon's Bottomless Bar &amp; Band Night</span>
           </h2>
 
           <h3 className="hero-subtitle fade-up delay-1">
-            Everything included. One night. No regrets.
+            One night. No regrets.
           </h3>
 
           <div className="hero-title-img fade-up delay-2">

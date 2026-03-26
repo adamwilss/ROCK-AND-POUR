@@ -697,6 +697,17 @@ a {
     text-shadow: 0 0 30px rgba(255, 184, 0, 0.5);
 }
 
+.hero-subname {
+    display: block;
+    font-size: 0.7em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 0.5em;
+    color: rgba(255, 255, 255, 0.85);
+    text-transform: capitalize;
+    font-family: var(--font-body);
+}
+
 .hero-subtitle {
     font-family: 'Montserrat', sans-serif;
     font-size: clamp(0.95rem, 3vw, 1.3rem);
