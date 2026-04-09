@@ -14,6 +14,9 @@
     --font-body: var(--font-montserrat), 'Montserrat', sans-serif;
 
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    /* Set by JS ResizeObserver on the cancellation banner; 0 when no banner */
+    --banner-height: 0px;
 }
 
 * {
@@ -324,7 +327,7 @@ a {
 /* Navbar */
 .navbar {
     position: fixed;
-    top: 52px;
+    top: var(--banner-height, 0px);
     width: 100%;
     z-index: 1000;
     padding: 1.2rem 0;
@@ -685,8 +688,8 @@ a {
     width: 100%;
     max-width: 1200px;
     padding: 0 1.5rem;
-    /* Top padding is the source of truth — never rely on hero centering alone */
-    padding-top: 120px !important;
+    /* Clear the fixed banner + navbar; 70px ≈ navbar height + breathing room */
+    padding-top: calc(var(--banner-height, 0px) + 70px) !important;
     margin-top: 0;
     display: flex;
     flex-direction: column;
@@ -697,7 +700,7 @@ a {
 @media (max-width: 768px) {
     .hero-content {
         padding: 0 1.2rem;
-        padding-top: 130px !important;
+        padding-top: calc(var(--banner-height, 0px) + 70px) !important;
         gap: 1rem;
     }
 }
@@ -705,7 +708,7 @@ a {
 @media (max-width: 480px) {
     .hero-content {
         padding: 0 1rem;
-        padding-top: 120px !important;
+        padding-top: calc(var(--banner-height, 0px) + 60px) !important;
         gap: 0.8rem;
     }
 }
@@ -3124,7 +3127,7 @@ details[open] .collapse-arrow {
 
     /* Push content clear of the fixed banner + navbar */
     .hero-content {
-        padding-top: 130px !important;
+        padding-top: calc(var(--banner-height, 0px) + 70px) !important;
         padding-bottom: 8px;
     }
 

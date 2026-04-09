@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback, useRef } from "react";
 import Image from "next/image";
 import { Typewriter } from "@/components/ui/typewriter";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
@@ -43,6 +43,7 @@ const Countdown = React.memo(function Countdown({ targetDate }: { targetDate: st
 
 export default function Home() {
   const [inspectedPoster, setInspectedPoster] = useState<string | null>(null);
+  const bannerRef = useRef<HTMLDivElement>(null);
 
   const targetEvent = eventsData.find(e => !e.soldOut && new Date(e.date).getTime() > new Date().getTime()) || eventsData[0];
 
@@ -54,6 +55,19 @@ export default function Home() {
     window.addEventListener('keydown', handleEscKey);
     return () => window.removeEventListener('keydown', handleEscKey);
   }, [handleEscKey]);
+
+  // Measure banner height and expose as CSS variable so navbar + hero stay clear
+  useEffect(() => {
+    const banner = bannerRef.current;
+    if (!banner) return;
+    const update = () => {
+      document.documentElement.style.setProperty('--banner-height', `${banner.offsetHeight}px`);
+    };
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(banner);
+    return () => ro.disconnect();
+  }, []);
 
   useEffect(() => {
     const pc = document.getElementById('hero-particles');
@@ -76,7 +90,7 @@ export default function Home() {
     <>
 
       {/* Cancellation Banner */}
-      <div className="cancellation-banner">
+      <div className="cancellation-banner" ref={bannerRef}>
         <p>⚠️ IMPORTANT NOTICE: Due to unforeseen circumstances, the April 10th event has been cancelled. We sincerely apologise. Please contact the box office on <a href="tel:01619268992" className="phone-link">0161 926 8992</a> regarding refunds.</p>
       </div>
 
