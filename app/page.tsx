@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useCallback, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { Typewriter } from "@/components/ui/typewriter";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
@@ -42,19 +42,9 @@ const Countdown = React.memo(function Countdown({ targetDate }: { targetDate: st
 });
 
 export default function Home() {
-  const [inspectedPoster, setInspectedPoster] = useState<string | null>(null);
   const bannerRef = useRef<HTMLDivElement>(null);
 
   const targetEvent = eventsData.find(e => !e.soldOut && new Date(e.date).getTime() > new Date().getTime()) || eventsData[0];
-
-  const handleEscKey = useCallback((e: KeyboardEvent) => {
-    if (e.key === 'Escape') setInspectedPoster(null);
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('keydown', handleEscKey);
-    return () => window.removeEventListener('keydown', handleEscKey);
-  }, [handleEscKey]);
 
   // Measure banner height and expose as CSS variable so navbar + hero stay clear
   useEffect(() => {
@@ -313,45 +303,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Poster Section */}
-      <section className="poster-section section" id="events">
-        <div className="container text-center">
-          <div className="poster-pair scroll-reveal">
-            <div className="poster-wrapper">
-              <GlowingEffect spread={60} glow={true} disabled={false} proximity={80} inactiveZone={0.01} borderWidth={2} />
-              <div className="poster-container" onClick={() => setInspectedPoster('/POSTER.webp')}>
-                <Image
-                  src="/POSTER.webp"
-                  alt="Rock & Pour — April 10th 2026 at The Bowdon Rooms"
-                  className="event-poster"
-                  width={520}
-                  height={737}
-                  loading="lazy"
-                  style={{ width: '100%', height: '100%' }}
-                />
-              </div>
-            </div>
-            <div className="poster-wrapper">
-              <GlowingEffect spread={60} glow={true} disabled={false} proximity={80} inactiveZone={0.01} borderWidth={2} />
-              <div className="poster-container" onClick={() => setInspectedPoster('/band-poster.webp')}>
-                <Image
-                  src="/band-poster.webp"
-                  alt="Steven and the Holy Heathens — live at Rock & Pour"
-                  className="event-poster"
-                  width={520}
-                  height={737}
-                  loading="lazy"
-                  style={{ width: '100%', height: '100%' }}
-                />
-              </div>
-            </div>
-          </div>
-          <div className="poster-cta scroll-reveal delay-2">
-            <a href="https://www.skiddle.com/whats-on/Warrington/The-Bowdon-Rooms/Rock--Pour/42147525/" target="_blank" rel="noreferrer" className="btn btn-gold btn-large">GET YOUR TICKETS</a>
-            <p className="discount-note">Use code <span className="gold-text">ROCK10</span> at checkout for 10% off</p>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       < footer className="footer" >
@@ -444,14 +395,6 @@ export default function Home() {
         </div>
       </footer >
 
-      {inspectedPoster && (
-        <div className="lightbox-overlay" onClick={() => setInspectedPoster(null)}>
-          <div className="lightbox-content" onClick={e => e.stopPropagation()}>
-            <button className="lightbox-close" onClick={() => setInspectedPoster(null)}>✕</button>
-            <img src={inspectedPoster} alt="Poster" className="lightbox-img" />
-          </div>
-        </div>
-      )}
     </>
   );
 }
